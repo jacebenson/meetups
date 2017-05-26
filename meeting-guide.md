@@ -49,7 +49,14 @@ Other ideas;
 * Start a open group project making some scoped application
 * Ask for others to speak/provide topics
 * Show something cool and how it works
- 
+* [Designing Your Applications for Analytics](https://community.servicenow.com/docs/DOC-7060)
+* [Supercharging Your Apps with Analytics](https://community.servicenow.com/docs/DOC-6814)
+* [Introduction to GIT integration - Tracking your application development in GIT](https://community.servicenow.com/docs/DOC-6829)
+* [Instanbul Dev Tools](http://servicenow-dev-program.slides.com/daveslusher/bay-area-dev-12-2016)
+
+[11:39] 
+feel free to edit and make it your own
+
 ## First Meetup
 
 * Determine a regular meeting schedule
