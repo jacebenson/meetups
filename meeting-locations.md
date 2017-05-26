@@ -1,21 +1,45 @@
-THings to consider;
-How many individuals are coming?
+# Meetup Guide
 
-What are we going to be doing at this meetup?
+## Hosting Location
 
-Will there be any special guests?
+This is one of the most difficult parts of hosting a meetup.  Finding an appropriate location to host.  
 
-----
+Possible location types;
+*. Coffee shops
+*. Bars
+*. Restaruants
+*. Community Centers
+*. Libraries
+*. Museums
+*. Churches
+*. Schools
+*. Universities
+*. Coworking spaces
+*. Businesses
 
-Depending on the size/needs of your group, they may happen at coffee shops, bars, and restaraunts.
+## Meetup Content
 
-Community Centers, Libraries, Museums, Churches, Schools, and Universities are often willing to allow groups to meet in their spaces.
+This would be the other difficult part about hosting a meetup.  Generally, going over the a few of the interesting features of a recent version of Servicenow is a good starting point.
 
-Businesses may host the meetup as well.  Check with Servicenow, or other employers who use Servicenow to see if they have an interest to hosting this group.
+Be sure to do the following;
+*. Make an agenda
+*. Keep to the time allotted
+*. Introduce yourself as one of the hosts and any speakers.
+*. If the group is small enough, get brief introductions from others.
+*. Overview of today's meetup content.
+*. Ask for help in producing content/and hosting future events.
 
-Be sure to check out the space in person before hosting there as it may seem great online, but not when in person.
-
+Other ideas;
+*. Do a lab from a knowledge event e.g. building a killer ux by brad tilton
+*. Configuration of some plugin.  e.g. like Password Reset
+*. Best Practices on (insert subject here) e.g. SRAPI, Server side scripting
+*. Start a open group project making some scoped application
+*. Ask for others to speak/provide topics
+*. Show something cool and how it works
+ 
 
 Resources:
 
 * [Meetups "Find a venue" page](https://www.meetup.com/help/customer/portal/articles/608911-find-a-good-meetup-venue/)
+* [25 Best Practices for Meetup Organizers](http://mikeschinkel.com/blog/25-best-practices-for-meetup-organizers/)
+* [Meetup Organizer groups](https://www.meetup.com/topics/organizer/)
