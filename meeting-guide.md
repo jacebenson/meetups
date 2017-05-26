@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Meetup Guide](#meetup-guide)
+  - [Hosting Location](#hosting-location)
+  - [Meetup Content](#meetup-content)
+  - [First Meetup](#first-meetup)
+  - [Meetup.com](#meetupcom)
+- [Resources:](#resources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Meetup Guide
 
 ## Hosting Location
@@ -50,7 +63,7 @@ Other ideas;
   * What's the coolest thing you've built in ServiceNow?
   * Anything else interesting the group should know about you?
 
-Resources:
+# Resources:
 
 * [Meetups "Find a venue" page](https://www.meetup.com/help/customer/portal/articles/608911-find-a-good-meetup-venue/)
 * [25 Best Practices for Meetup Organizers](http://mikeschinkel.com/blog/25-best-practices-for-meetup-organizers/)
