@@ -37,6 +37,18 @@ Other ideas;
 * Ask for others to speak/provide topics
 * Show something cool and how it works
  
+## First Meetup
+
+* Determine a regular meeting schedule
+* Let them know this is their meetup as much as it is yours and as such you will ask and need help from some people for content and hosting
+
+## Meetup.com
+
+* Add questions (Group Tools->Your Members) to keep the attendees as technical as possible. 
+  * What's your primary objective for joining the group?
+  * How many years of ServiceNow development experience do you have?
+  * What's the coolest thing you've built in ServiceNow?
+  * Anything else interesting the group should know about you?
 
 Resources:
 
