@@ -76,41 +76,44 @@
 							<li>Follow along, or work ahead</li>
 						</ul>
 					</ul>
+					<aside class="notes">
+						
+					</aside>
 				</section>
 				<section data-timing="120">
 					<h2>Turn on your PDI</h2>
 					<p>https://developer.servicenow.com</p>
+					<aside class="notes">
+						If you don't have  a PDI, let me know.
+					</aside>
 				</section>
 				<section data-timing="120">
 					<h2>Download zip</h2>
-					<p>https://bit.ly/snlab711</p>
-					<p>https://sndevs.github.io/meetups/minneapolis/07-11-2017-lab.zip</p>
+					<p>bit.ly/killerux</p>
+					<p>sndves.github.com/meetups/</p>
+					<p>Click Minneapolis, then 07/11/2017</p>
+					<p>Download the XML file</p>
+					<aside class="notes">
+					</aside>
 				</section>
-				<section data-timing="600">
+				<section data-timing="600" class="hasVideo">
 					<h2>Install Remote Update Set</h2>
-					<p></p>
-					<p>What are you working on at the moment?</p>
+					<video class="stretch" data-autoplay src="video001-load-update-set.mp4" muted="muted"></video>
+					<aside class="notes">
+						Alt click the video (zooms in)<br/>
+						repeat to zoom out
+					</aside>
 				</section>
 			</section>
-			<!--
-			<section>
-				<h2>Topic 1</h2>
-				<p>
-					Bla Bla Bla
-				</p>
+			<section data-timing="600" class="hasVideo">
+				<h2>Create some Notes</h2>
+				<video class="stretch" data-autoplay src="video002-create-some-notes.mp4" muted="muted"></video>
 			</section>
 
-			<section>
-				<h2>Topic 2</h2>
-				<p>
-					Bla Bla Bla
-				</p>
-				<p>
-					Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt
-					+ click anywhere to zoom back out.
-				</p>
+			<section data-timing="600" class="hasVideo">
+				<h2>Load the Portal</h2>
+				<video class="stretch" data-autoplay src="video003-load-the-portal.mp4" muted="muted"></video>
 			</section>
-			-->
 
 			<!--
 			<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
@@ -159,12 +162,12 @@ sys_user.get(gs.getUserID()){
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'https://sndevs.github.io/meetups/reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/zoom-js/zoom.js', async: true },
-					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/notes/notes.js', async: true }
+					{ src: '/reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: '/reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: '/reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: '/reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/reveal/plugin/notes/notes.js', async: true }
 				]
 			});
 	</script>
