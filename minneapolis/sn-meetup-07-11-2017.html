@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Servicenow Meetups</title>
+
+	<meta name="description" content="A guide">
+	<meta name="author" content="Jace Benson">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="https://sndevs.github.io/meetups/reveal/css/reveal.css">
+	<link rel="stylesheet" href="https://sndevs.github.io/meetups/reveal/css/theme/black.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="https://sndevs.github.io/meetups//reveal/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="reveal/lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<section data-timing="30">
+				<h1>Servicenow</h1>
+				<h1>Meetup</h1>
+				<h3>Welcome to the Developer Meetup!</h3>
+				<aside class="notes">
+					Controls;<br/>
+					Esc (zoom way out)<br/>
+					Alt (zoom way in)<br/>
+					Spacebar (progress)<br/>
+				</aside>
+				</section>
+				<section data-timing="30">
+					<h2>Three rules</h2>
+					<ol>
+						<li>No "religious" wars</li>
+						<li>No recruiting</li>
+						<li>No sales pitches</li>
+					</ol>
+				</section>
+			</section>
+
+
+			<!-- Example of nested vertical slides -->
+			<section>
+				<section data-timing="30">
+					<h2>Agenda</h2>
+					<ul>
+						<li class="fragment">Welcome and Intros</li>
+						<!--
+						<li class="fragment">Topic 1</li>
+						<li class="fragment">Topic 2</li>
+						-->
+						<li class="fragment">Open Discussion</li>
+						<ul class="fragment">
+							<li>Item 1</li>
+							<li>Item 2</li>
+						</ul>
+					</ul>
+				</section>
+				<section data-timing="120">
+					<h2>Who are your hosts?</h2>
+					<p>Jace Benson (Customer with FICO)</p>
+					<p>Lily Li (Servicenow Employee)</p>
+				</section>
+				<section data-timing="600">
+					<h2> Who are you?</h2>
+					<p>What are you looking for from this meetup?</p>
+					<p>What are you working on at the moment?</p>
+				</section>
+			</section>
+			<!--
+			<section>
+				<h2>Topic 1</h2>
+				<p>
+					Bla Bla Bla
+				</p>
+			</section>
+
+			<section>
+				<h2>Topic 2</h2>
+				<p>
+					Bla Bla Bla
+				</p>
+				<p>
+					Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt
+					+ click anywhere to zoom back out.
+				</p>
+			</section>
+			-->
+
+			<!--
+			<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+					<h2>... and GIFs!</h2>
+			</section>
+			-->
+			<!--
+			<section>
+				<h2>Pretty Code</h2>
+				<pre>
+					<code class="hljs" data-trim contenteditable>
+var sys_user = new GlideRecord('sys_user');
+sys_user.get(gs.getUserID()){
+	var first_name = sys_user.getValue('first_name');//64 chars
+	gs.addInfoMessage(first_name + ' rocks!');
+}
+					</code>
+				</pre>
+			</section>
+			-->
+			
+			<section style="text-align: left;">
+				<h1>End of Presentation</h1>
+				<p>
+					Now time for Demos, then Open discussion/happy hour
+				</p>
+			</section>
+
+		</div>
+
+	</div>
+
+	<script src="https://sndevs.github.io/meetups/reveal/lib/js/head.min.js"></script>
+	<script src="https://sndevs.github.io/meetups/reveal/js/reveal.js"></script>
+
+	<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				defaultTiming: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'https://sndevs.github.io/meetups/reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'https://sndevs.github.io/meetups/reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+	</script>
+
+</body>
+
+</html>
