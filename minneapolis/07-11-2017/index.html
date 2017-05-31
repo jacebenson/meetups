@@ -162,12 +162,12 @@ sys_user.get(gs.getUserID()){
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: '/reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-					{ src: '/reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: '/reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: '/reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-					{ src: '/reveal/plugin/zoom-js/zoom.js', async: true },
-					{ src: '/reveal/plugin/notes/notes.js', async: true }
+					{ src: '/meetups/reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: '/meetups/reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: '/meetups/reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: '/meetups/reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+					{ src: '/meetups/reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/meetups/reveal/plugin/notes/notes.js', async: true }
 				]
 			});
 	</script>
