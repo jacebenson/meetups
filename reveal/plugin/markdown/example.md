@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Markdown Demo](#markdown-demo)
+  - [External 1.1](#external-11)
+  - [External 1.2](#external-12)
+  - [External 2](#external-2)
+  - [External 3.1](#external-31)
+  - [External 3.2](#external-32)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Markdown Demo
 
 

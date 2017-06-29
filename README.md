@@ -6,6 +6,10 @@
   - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Start/Join your local group](#startjoin-your-local-group)
+- [Administration of Group](#administration-of-group)
+  - [Adding questions](#adding-questions)
+  - [Welcome Message](#welcome-message)
+  - [Handling non-devs](#handling-non-devs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -29,7 +33,31 @@ These instructions will get you a copy of this repo and how to assist/host a mee
 
 If no group was found and you'd like to be host, fill [this](https://www.surveymonkey.com/r/snmeetupleadsurvey?elqTrackId=BA05F81AC3C13FE4547AF3B095CB3F15&elq=66db1f89fc8a4f0e83e893167c897427&elqaid=18247&elqat=1&elqCampaignId=8384) out.
 
-# Handling non-devs
+# Administration of Group
+
+## Adding questions
+
+From Meetup.com navigate to;
+
+Group tools -> Settings -> Your members -> Add Questions
+
+1. What's your primary objective for joining this group?
+2. How many years of ServiceNow development experience do you have?
+3. What's the coolest thing you've built in ServiceNow?
+4. Anything else interesting the group should know about you?
+
+## Welcome Message
+
+This is an example;
+
+```
+Thanks for joining.  Glad to have you.  Make sure to RSVP to events.  If you have any ideas on what you'd like to see here let me know.
+Other things to do;
+* Join us on sndevs.slack.com #minneapolis
+*  *  invite url: snowslack.heroku.com
+```
+
+## Handling non-devs
 
 1. There’s a time and a place, maybe even at some meetups, but I don’t think the SN Dev meetups are the time/place
 2. If someone *does* get in touch with a recruiter at a meetup, gets a new job, I don’t want there to be negative pressure from employers about these meetups
