@@ -28,3 +28,12 @@ These instructions will get you a copy of this repo and how to assist/host a mee
 * Read [this](https://github.com/jacebenson/servicenow-meetups/blob/master/meeting-guide.md)
 
 If no group was found and you'd like to be host, fill [this](https://www.surveymonkey.com/r/snmeetupleadsurvey?elqTrackId=BA05F81AC3C13FE4547AF3B095CB3F15&elq=66db1f89fc8a4f0e83e893167c897427&elqaid=18247&elqat=1&elqCampaignId=8384) out.
+
+# Handling non-devs
+
+1. There’s a time and a place, maybe even at some meetups, but I don’t think the SN Dev meetups are the time/place
+2. If someone *does* get in touch with a recruiter at a meetup, gets a new job, I don’t want there to be negative pressure from employers about these meetups
+3. I completely acknowledge that there are some positives that *could* come from having a recruiter present if it isn’t brazen, but I’m not sure if that’s worth the risk to the meetup
+I don’t think you’ll ever completely avoid it, but I’d say that shying away from it as a default is probably the right thing
+Re: non-sn-devs, as long as they aren’t the crazy “I was stationed in Istanbul” guy, I think it can be completely ok as long as you set the expectation about what the meetups are.
+Sometimes there are developers that attended that didn’t know what ServiceNow was.  This isnot the only goal of these meetups but I also look at that as a successful outcome.
