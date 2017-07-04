@@ -154,6 +154,15 @@
 						repeat to zoom out
 					</aside>
 				</section>
+				<!--Set Default Value on user field-->
+				<section data-timing="600">
+					<h2>Set Default Value on user field</h2>
+					<ol>
+					<li>Navigate to dictionary</li>
+					<li>x_snc_createnotes_note.user</li>
+					<li>default value: javascript:gs.getUserID();</li>
+					</ol>
+				</section>
 			</section>
 			<!-- Lab 0 Introduce the Notes App -->
 			<section>
@@ -398,15 +407,81 @@ function to the Client Script field after line 13.</p>
 				<!--Verify success Lab step-->
 				<section>
 					<h2>Lab Success Verification</h2>
-					<p>Yyou should be able to filter the notes by typing in the Filter field.</p>
+					<p>You should be able to filter the notes by typing in the Filter field.</p>
 				</section>
 			</section>
-			<!-- Lab 4 Notes List Widget -->
+			<!-- Lab 4.1 Notes List Widget -->
 			<section>
 				<!--Goal-->
 				<section data-timing="60">
-					<h2>Lab 4</h2>
-					<p>In this lab you will create a custom widget that displays the list of notes you created in Lab 0. You will also broadcast the sys_id of the selected note when clicked.</p>
+					<h2>Lab 4.1</h2>
+					<p>So far we’ve added the ability to load your list of notes from the database and edit those notes, but what if you want to add a new note. In this lab we’ll add a button that allows you to create a new note from our app.</p>
+				</section>
+				<!-- Edit Note Body widget html -->
+				<section>
+					<h2>Edit List widget (HTML)</h2>
+					<p>We need to add a button to the UI to trigger the new note creation. We’ll add a button with a glyphicon to the HTML. Add the highlighted text to the panel-header part of the HTML Template</p>
+					<a href="./assets/L41-2.txt" target="_blank"><img src="./assets/L41-2.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget css -->
+				<section>
+					<h2>Edit List widget (CSS)</h2>
+					<p>Now we want to add a bit of styling to the title to make everything look a little better. Check the checkbox next to the CSS – SCSS option to add a fourth column to the widget editor.</p>
+					<a href="./assets/L41-3.css" target="_blank"><img src="./assets/L41-3.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget client -->
+				<section>
+					<h2>Edit List widget (Client)</h2>
+					<p>In the Client Script portion of the widget editor add the following function, but before the closing curly brace. This is going to call the server side code, tell it we’re creating a new note and then get back information about the new note</p>
+					<a href="./assets/L41-4.js" target="_blank"><img src="./assets/L41-4.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget s -->
+				<section>
+					<h2>Edit List widget (Server)</h2>
+					<p>Now we need to add some code to the server side script to create a new note. Add the following code before the closing curly brace in the Server Script field. This will create the new note and return the title, note, and sys_id to the client.</p>
+					<a href="./assets/L41-5.js" target="_blank"><img src="./assets/L41-5.PNG" /></a>
+				</section>
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>Go back to the CreateNotes portal, refresh the page, and click the New button. You should see a new note show up in the list and be available to edit on the right.</p>
+				</section>
+			</section>
+			<!-- Lab 4.2 Notes List Widget -->
+			<section>
+				<!--Goal-->
+				<section data-timing="60">
+					<h2>Lab 4.2</h2>
+					<p>In this lab you add a button to the note editor that triggers a delete of the note record.</p>
+				</section>
+				<!-- Edit Note Body widget server -->
+				<section>
+					<h2>Edit Body widget (HTML)</h2>
+					<p>First we need to add a delete button. Add the highlighted lines to the HTML Template field.</p>
+					<a href="./assets/L42-2.txt" target="_blank"><img src="./assets/L42-2.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget server -->
+				<section>
+					<h2>Edit Body widget (Client)</h2>
+					<p>Now we need to create the client side function that gets triggered by the new button added in the last step. Paste the following before the c.autoExpand function.</p>
+					<a href="./assets/L42-3.js" target="_blank"><img src="./assets/L42-3.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget server -->
+				<section>
+					<h2>Edit Body widget (Server)</h2>
+					<p>Now we need to add a few lines to the Server Script field that will delete the record on the server side. We already have the GlideRecord call setup, so we just need to add the highlighted text.</p>
+					<a href="./assets/L42-4.js" target="_blank"><img src="./assets/L42-4.PNG" /></a>
+				</section>
+				<!-- Edit Note List widget server -->
+				<section>
+					<h2>Edit List widget (Client)</h2>
+					<p>The note is already being removed from the DB, but now we need to remove it from the Note list widget.  Add the following code before the last curly brace.</p>
+					<a href="./assets/L42-5.js" target="_blank"><img src="./assets/L42-5.PNG" /></a>
+				</section>
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>Click on a note and click on the delete button. It should disappear from the screen and from the list.</p>
 				</section>
 			</section>
 			<!-- -->
