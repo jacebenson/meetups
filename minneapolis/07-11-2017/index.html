@@ -14,11 +14,11 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" href="https://sndevs.github.io/meetups/reveal/css/reveal.css">
-	<link rel="stylesheet" href="https://sndevs.github.io/meetups/reveal/css/theme/black.css" id="theme">
+	<link rel="stylesheet" href="./reveal/css/reveal.css">
+	<link rel="stylesheet" href="./reveal/css/theme/black.css" id="theme">
 
 	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="https://sndevs.github.io/meetups//reveal/lib/css/zenburn.css">
+	<link rel="stylesheet" href="./reveal/lib/css/zenburn.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -68,18 +68,47 @@
 					<h2>Agenda</h2>
 					<ul>
 						<li class="fragment">Welcome</li>
-						<li class="fragment">Setup</li>
-						<ul class="fragment">
-							<li>Turn on your PDI</li>
-							<li>Download zip</li>
-							<li>Install Remote Update Set</li>
-							<li>Follow along, or work ahead</li>
-						</ul>
+						<li class="fragment">Intros</li>
+						<li class="fragment">How to build a killer UX with a Service Portal Lab</li>
+						<li class="fragment">Move to Green Mill Pizza (attached) for food/drinks.</li>
+						<li class="fragment">Networking</li>
+						<li class="fragment">Happy Hour at Green Mill</li>
 					</ul>
 					<aside class="notes">
 						
 					</aside>
 				</section>
+				<section>
+					<h2>Welcome</h2>
+					<div class="fragment">
+					<p>We have a lot of new folks here today which is great!</p>
+					</div>
+					<div class="fragment">
+					<h2>Next Meetup Sept 12</h2>
+					<p>Things you asked to talk about/demod</p>
+						<ul>
+							<li>Service Catalog</li>
+							<li>Service Portal</li>
+							<li>Best Practices</li>
+							<li>Automated Testing Framework</li>
+							<li>Custom Apps</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+				<h2>Intros</h2>
+				<ul>
+					<li>Jace Benson</li>
+					<li>Josh Nerius</li>
+					<!--<li>Lily Li</li>-->
+					<!--<li>Dave Slusher</li>-->
+				</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Build a Killer UX</h2>
+			</section>
+			<section>
 				<section data-timing="120">
 					<h2>Turn on your PDI</h2>
 					<p>https://developer.servicenow.com</p>
@@ -89,8 +118,8 @@
 				</section>
 				<section data-timing="120">
 					<h2>Download zip</h2>
-					<p>bit.ly/killerux</p>
-					<p>sndves.github.com/meetups/</p>
+					<p><a href="https://bit.ly/killerux" target="_blank">bit.ly/killerux</a></p>
+					<p><a href="https://github.com/sndevs/meetups/" target="_blank">github.com/sndevs/meetups/</a></p>
 					<p>Click Minneapolis, then 07/11/2017</p>
 					<p>Download the XML file</p>
 					<aside class="notes">
@@ -98,43 +127,97 @@
 				</section>
 				<section data-timing="600" class="hasVideo">
 					<h2>Install Remote Update Set</h2>
-					<video class="stretch" data-autoplay src="video001-load-update-set.mp4" muted="muted"></video>
+					<video class="stretch" data-autoplay src="./assets/1-3-load-update-set.mp4" muted="muted"></video>
 					<aside class="notes">
 						Alt click the video (zooms in)<br/>
 						repeat to zoom out
 					</aside>
 				</section>
 			</section>
-			<section data-timing="600" class="hasVideo">
-				<h2>Create some Notes</h2>
-				<video class="stretch" data-autoplay src="video002-create-some-notes.mp4" muted="muted"></video>
-			</section>
-
-			<section data-timing="600" class="hasVideo">
-				<h2>Load the Portal</h2>
-				<video class="stretch" data-autoplay src="video003-load-the-portal.mp4" muted="muted"></video>
-			</section>
-
-			<!--
-			<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-					<h2>... and GIFs!</h2>
-			</section>
-			-->
-			<!--
+			<!-- Lab 0 Introduce the Notes App -->
 			<section>
-				<h2>Pretty Code</h2>
-				<pre>
-					<code class="hljs" data-trim contenteditable>
-var sys_user = new GlideRecord('sys_user');
-sys_user.get(gs.getUserID()){
-	var first_name = sys_user.getValue('first_name');//64 chars
-	gs.addInfoMessage(first_name + ' rocks!');
-}
-					</code>
-				</pre>
+				<section data-timing="60">
+					<h2>Lab Goal</h2>
+					<p>In this lab you will take a look at the custom Notes application that comes with your instance and create some demo data.</p>
+				</section>
+				<section data-timing="600" class="hasVideo">
+					<h2>Create new Notes</h2>
+					<video class="stretch" data-autoplay src="./assets/3-0-create-some-notes.mp4" muted="muted"></video>
+				</section>
 			</section>
-			-->
-			
+			<!-- Lab 1 Notes List Widget -->
+			<section>
+				<section data-timing="60">
+					<h2>Lab Goal</h2>
+					<p>In this lab you will create a custom widget that displays the list of notes you created in Lab 0. You will also broadcast the sys_id of the selected note when clicked.</p>
+				</section>
+				<section data-timing="60">
+					<h2>Open the Note List Widget</h2>
+					<ol>
+						<li>Launch the CreateNotes portal by go to CreateNotes > Portal.</li>
+						<li>In the portal, CTRL+Right Click somewhere in the Notes list widget box and choose Widget in Editor > This should launch the Service Portal widget editor in a new tab.</li>
+					</ol>
+				</section>
+				<section data-timing="600" class="hasVideo">
+					<video class="stretch" data-autoplay src="./assets/5-0-load-the-portal.mp4" muted="muted"></video>
+					<aside class="notes">
+						CTRL+Right Click on the widget to get the menu.<br/>
+						Choose Widget in Editor
+					</aside>
+				</section>
+				<section>
+					<h2>Query the Notes Table (Server Script)</h2>
+					<ol>
+						<li>Use the checkboxes at the top of the widget editor to enable the HTML Template, Client Script, and Server Script sections.</li>
+						<li>Add the following code to the Server Script field to allow us to populate the list of notes.</li>
+					</ol>
+				</section>
+				<section>
+					<h2>Query the Notes Table (Server Script)</h2>
+					<pre>
+						<code class="hljs" data-trim contenteditable>
+	(function() {
+	  data.notes = [];//create an array for notes
+	  var noteGR = new GlideRecord('x_snc_createnotes_note');
+	  noteGR.addQuery('user', gs.getUser().getID());
+	  noteGR.orderByDesc('sys_created_on');
+	  noteGR.query();
+	  while (noteGR.next()) {
+		var noteObj = {};
+		var fields = 'number,title,share,sys_id';
+		$sp.getRecordDisplayValues(noteObj, noteGR, fields);
+		//get the first 20 characters of the description
+		noteObj.note = noteGR.getValue('note').slice(0,20);
+		data.notes.push(noteObj);
+	  }
+	})();
+						</code>
+					</pre>			
+					<!--<aside class="notes">
+						Use the checkboxes at the top of the widget editor to enable the HTML Template, Client Script, and Server Script sections.<br/>
+						Update the server script as listed in slide.<br/>
+						Save the widget, reload the portal page<br/>
+						CTRL+Right Click on the notes widget and choose Log to Console: $scope.data
+					</aside>-->
+				</section>
+				<section>
+				</section>
+				<section style="text-align: left;">
+					<h2></h2>
+					<ol>
+						<li>Reload the notes portal.</li>
+						<li>Hold CTRL+Right click on the widget.</li>
+						<li>Console.log $scope.data.</li>
+					</ol>
+					<img src="./assets/5-2-console.png" />
+				</section>
+				<!--
+				<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+				</section>
+				-->
+			</section>
+			<!-- -->
 			<section style="text-align: left;">
 				<h1>End of Presentation</h1>
 				<p>
@@ -146,8 +229,8 @@ sys_user.get(gs.getUserID()){
 
 	</div>
 
-	<script src="https://sndevs.github.io/meetups/reveal/lib/js/head.min.js"></script>
-	<script src="https://sndevs.github.io/meetups/reveal/js/reveal.js"></script>
+	<script src="./reveal/lib/js/head.min.js"></script>
+	<script src="./reveal/js/reveal.js"></script>
 
 	<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -162,12 +245,12 @@ sys_user.get(gs.getUserID()){
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: '/meetups/reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
-					{ src: '/meetups/reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: '/meetups/reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-					{ src: '/meetups/reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-					{ src: '/meetups/reveal/plugin/zoom-js/zoom.js', async: true },
-					{ src: '/meetups/reveal/plugin/notes/notes.js', async: true }
+					{ src: './reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: './reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: './reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: './reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+					{ src: './reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: './reveal/plugin/notes/notes.js', async: true }
 				]
 			});
 	</script>
