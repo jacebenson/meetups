@@ -42,18 +42,22 @@
 		<div class="slides">
 			<!--Welcome to Meetup-->
 			<section>
-				<section data-timing="30">
+				<section>
+				<h3>Controls</h3>
+				<ul>
+					<li>Esc (zoom way out)</li>
+					<li>Alt + click (zoom in)</li>
+					<li>Spacebar (progress)</li>
+					<li>Arrows (jump around)</li>
+				</ul>
+				</aside>
+				</section>
+				<section>
 				<h1>Servicenow</h1>
 				<h1>Meetup</h1>
 				<h3>Welcome to the Developer Meetup!</h3>
-				<aside class="notes">
-					Controls;<br/>
-					Esc (zoom way out)<br/>
-					Alt (zoom way in)<br/>
-					Spacebar (progress)<br/>
-				</aside>
 				</section>
-				<section data-timing="30">
+				<section>
 					<h2>Three rules</h2>
 					<ol>
 						<li>No "religious" wars</li>
@@ -65,19 +69,15 @@
 			<!-- Agenda/Welcome/Intros -->
 			<section>
 				<!--Agenda-->
-				<section data-timing="30">
+				<section>
 					<h2>Agenda</h2>
 					<ul>
-						<li class="fragment">Welcome</li>
-						<li class="fragment">Intros</li>
-						<li class="fragment">How to build a killer UX with a Service Portal Lab</li>
-						<li class="fragment">Move to Green Mill Pizza (attached) for food/drinks.</li>
-						<li class="fragment">Networking</li>
-						<li class="fragment">Happy Hour at Green Mill</li>
+						<li>Welcome</li>
+						<li>Intros</li>
+						<li>How to build a killer UX with a Service Portal Lab</li>
+						<li>Networking</li>
+						<li>Happy Hour at Green Mill</li>
 					</ul>
-					<aside class="notes">
-						
-					</aside>
 				</section>
 				<!--Welcome-->
 				<section>
@@ -86,8 +86,9 @@
 					<p>We have a lot of new folks here today which is great!</p>
 					</div>
 					<div class="fragment">
-					<h2>Next Meetup Sept 12</h2>
-					<p>Things you asked to talk about/demod</p>
+					<h2>Next Meetup</h2>
+					<p>Always looking for hosts and speakers</p>
+					<!--<p>Things you asked to talk about/demod</p>
 						<ul>
 							<li>Service Catalog</li>
 							<li>Service Portal</li>
@@ -95,22 +96,28 @@
 							<li>Automated Testing Framework</li>
 							<li>Custom Apps</li>
 						</ul>
+						-->
 					</div>
 				</section>
 				<!--Intros-->
 				<section>
 				<h2>Intros</h2>
-				<ul>
+				<!--<ul>
 					<li>Jace Benson</li>
 					<li>Josh Nerius</li>
-					<!--<li>Lily Li</li>-->
-					<!--<li>Dave Slusher</li>-->
-				</ul>
+					<li>Lily Li</li>
+					<li>Dave Slusher</li>
+				</ul>-->
 				</section>
 			</section>
 			<!--Meat of Meetup-->
 			<section>
-				<h2>Build a Killer UX</h2>
+				<h2>What is this?</h2>
+				<p>This is a simple scoped app with a service portal.</p>
+				<p>This app has "notes" that users can take.  We're going to make a nice by showing this list on the service portal, then allowing you to edit the notes on the service portal.</p>
+			</section>
+			<section>
+				<h2>Overview of labs</h2>
 				<ul>
 					<li>Prep - Turn on your PDI, and install update set</li>
 					<li>Lab 0 - Introduce Notes app and Service Portal</li>
@@ -121,60 +128,50 @@
 					<li>Lab 3.2 - Add Filtering Notes capability</li>
 					<li>Lab 4.1 - Add new Note capability</li>
 					<li>Lab 4.2 - Add delete Note capability</li>
-					<li>Challenge Lab 1 - Full Screen Mode</li>
-					<li>Challenge Lab 2 - HTML Editor</li>
 				</ul>
 			</section>
 			<!--Prep Turn on PDI/Install update set-->
 			<section>
 				<!--Turn on PDI-->
-				<section data-timing="120">
+				<section>
 					<h2>Turn on your PDI</h2>
 					<p>https://developer.servicenow.com</p>
-					<aside class="notes">
-						If you don't have  a PDI, let me know.
-					</aside>
 				</section>
 				<!--Download Update Set-->
-				<section data-timing="120">
-					<h2>Download zip</h2>
-					<p><a href="https://bit.ly/killerux" target="_blank">bit.ly/killerux</a></p>
-					<p><a href="https://github.com/sndevs/meetups/" target="_blank">github.com/sndevs/meetups/</a></p>
-					<p>Click Minneapolis, then 07/11/2017</p>
-					<p>Download the XML file</p>
-					<aside class="notes">
-					</aside>
+				<section>
+					<h2>Download XML</h2>
+					<p><a href="https://github.com/sndevs/meetups/decks/sp-killer-ux/CreateNotes.xml" target="_blank" download>github.com/sndevs/meetups/decks/sp-killer-ux/CreateNotes.xml</a></p>
 				</section>
 				<!--Install Update Set-->
-				<section data-timing="600" class="hasVideo">
+				<section class="hasVideo">
 					<h2>Install Remote Update Set</h2>
-					<video class="stretch" data-autoplay src="./assets/A.mp4" muted="muted"></video>
+					<video class="stretch" data-autoplay src="./assets/A.mp4" muted="muted" loop></video>
 					<aside class="notes">
 						Alt click the video (zooms in)<br/>
 						repeat to zoom out
 					</aside>
 				</section>
 				<!--Set Default Value on user field-->
-				<section data-timing="600">
+				<section>
 					<h2>Set Default Value on user field</h2>
 					<ol>
-					<li>Navigate to dictionary</li>
-					<li>x_snc_createnotes_note.user</li>
-					<li>default value: javascript:gs.getUserID();</li>
+						<li>Navigate to dictionary</li>
+						<li>x_snc_createnotes_note.user</li>
+						<li>default value: javascript:gs.getUserID();</li>
 					</ol>
 				</section>
 			</section>
 			<!-- Lab 0 Introduce the Notes App -->
 			<section>
 				<!--Goal-->
-				<section data-timing="60">
+				<section>
 					<h2>Lab 0</h2>
-					<p>In this lab you will take a look at the custom Notes application that comes with your instance and create some demo data.</p>
+					<p>Take a look at the custom Notes application that comes with your instance and create some demo data.</p>
 				</section>
 				<!--Create new notes-->
-				<section data-timing="600" class="hasVideo">
+				<section class="hasVideo">
 					<h2>Create new Notes</h2>
-					<video class="stretch" data-autoplay src="./assets/L0-2.mp4" muted="muted"></video>
+					<video class="stretch" data-autoplay src="./assets/L0-2.mp4" muted="muted" loop></video>
 				</section>
 				<!--Address issue with notes not having user-->
 				<section>
@@ -184,12 +181,12 @@
 			<!-- Lab 1 Notes List Widget -->
 			<section>
 				<!--Goal-->
-				<section data-timing="60">
+				<section>
 					<h2>Lab 1</h2>
-					<p>In this lab you will create a custom widget that displays the list of notes you created in Lab 0. You will also broadcast the sys_id of the selected note when clicked.</p>
+					<p>Create a custom widget that displays the list of notes you created in Lab 0. You will also broadcast the sys_id of the selected note when clicked.</p>
 				</section>
 				<!--Open the note list widget-->
-				<section data-timing="60">
+				<section>
 					<h2>Open the Note List Widget</h2>
 					<ol>
 						<li>Launch the CreateNotes portal by go to CreateNotes > Portal.</li>
@@ -197,16 +194,16 @@
 					</ol>
 				</section>
 				<!--Open the note list widget video-->
-				<section data-timing="600" class="hasVideo">
+				<section class="hasVideo">
 					<h2>Open the note list</h2>
-					<video class="stretch" data-autoplay src="./assets/L1-2.mp4" muted="muted"></video>
+					<video class="stretch" data-autoplay src="./assets/L1-2.mp4" muted="muted" loop></video>
 					<aside class="notes">
 						CTRL+Right Click on the widget to get the menu.<br/>
 						Choose Widget in Editor
 					</aside>
 				</section>
 				<!--Update note list widget server script-->
-				<section data-timing="60">
+				<section>
 					<h2>Update note list widget server script</h2>
 					<ol>
 						<li>Use the checkboxes at the top of the widget editor to enable the HTML Template, Client Script, and Server Script sections.</li>
@@ -242,12 +239,16 @@
 					<p>Save the widget with this code, check the page /notes</p>
 					<a href="./assets/L1-7.txt" target="_blank"><img width="100%" src="./assets/L1-7.PNG" /></a>
 				</section>
+				<!--Add ng-click to A tag-->
+				<section>
+					<h2>Add ng-click to A tag</h2>
+					<p>This allows your html to call the function in the client script.</p>
+					<a href="./assets/L1-8-1.txt" target="_blank"><img width="100%" src="./assets/L1-8-1.PNG" /></a>
+				</section>
 				<!--Broadcast the Selected Note-->
 				<section>
 					<h2>Broadcast Selected Note</h2>
-					<p>Add ng-click attribute to A tag</p>
-					<a href="./assets/L1-8-1.txt" target="_blank"><img src="./assets/L1-8-1.PNG" /></a>
-					<p>Client Script</p>
+					<p>Edit List widget (client)</p>
 					<a href="./assets/L1-8-2.js" target="_blank"><img width="65%" src="./assets/L1-8-2.PNG" /></a>
 				</section>
 				<!--Verify success Lab step-->
@@ -261,12 +262,12 @@
 			<!-- Lab 2.1 Populate/Update Body widget -->
 			<section>
 				<!--Goal-->
-				<section data-timing="60">
+				<section>
 					<h2>Lab 2.1</h2>
-					<p>In this lab you will configure the widget that shows the content of the selected note.</p>
+					<p>Configure the widget that shows the content of the selected note.</p>
 				</section>
 				<!--Open the widget-->
-				<section data-timing="60">
+				<section>
 					<h2>Open the Widget</h2>
 					<ol>
 						<li>
@@ -278,13 +279,13 @@
 					</ol>
 				</section>
 				<!--Add Event Listener-->
-				<section data-timing="600">
+				<section>
 					<h2>Add Event Listener</h2>
 					<a href="./assets/L21-3.js" target="_blank"><img width="100%" src="./assets/L21-3.PNG" /></a>
 					<p>Save the widget.  On your portal view the console as you click.  You should see "Listener caught NoteID: .."</p>
 				</section>
 				<!--Update note list widget server  script-->
-				<section data-timing="60">
+				<section>
 					<h2>Get Content from server</h2>
 					<p>Change the function in the client script to match the below.  This will use c.server.get() to send an object containing our action and noteID to the server where we’ll use it to grab the note fields using GlideRecord.</p>
 					<a href="./assets/L21-4.js" target="_blank"><img width="100%" src="./assets/L21-4.PNG" /></a>
@@ -321,7 +322,7 @@ through adding the following to the HTML Template.</p>
 				<!--Goal-->
 				<section>
 				<h2>Lab 2.2</h2>
-				<p>In this lab you will configure the widget that shows the content of the selected note to allow you to update the note. For this application the note will automatically update as you type</p>
+				<p>Configure the widget that shows the content of the selected note to allow you to update the note. For this application the note will automatically update as you type</p>
 				</section>
 				<!--Update the Note widget-->
 				<section>
@@ -354,9 +355,9 @@ function to the Client Script field after line 13.</p>
 			<!-- Lab 3.1 Notes List Widget -->
 			<section>
 				<!--Goal-->
-				<section data-timing="60">
+				<section>
 					<h2>Lab 3.1</h2>
-					<p>In this lab you will edit both widgets so that when you change the title in the note body widget, the new title gets pushed into the note list widget without a refresh.</p>
+					<p>Edit both widgets so that when you change the title in the note body widget, the new title gets pushed into the note list widget without a refresh.</p>
 				</section>
 				<!-- Edit Note Body widget server -->
 				<section>
@@ -393,9 +394,9 @@ function to the Client Script field after line 13.</p>
 			<!-- Lab 3.2 Notes List Widget -->
 			<section>
 				<!--Goal-->
-				<section data-timing="60">
+				<section>
 					<h2>Lab 3.2</h2>
-					<p>In this lab you will edit both widgets so that when you change the title in the note body widget, the new title gets pushed into the note list widget without a refresh.</p>
+					<p>Edit both widgets so that when you change the title in the note body widget, the new title gets pushed into the note list widget without a refresh.</p>
 				</section>
 				<!-- Edit Note Body widget server -->
 				<section>
@@ -413,9 +414,9 @@ function to the Client Script field after line 13.</p>
 			<!-- Lab 4.1 Notes List Widget -->
 			<section>
 				<!--Goal-->
-				<section data-timing="60">
+				<section>
 					<h2>Lab 4.1</h2>
-					<p>So far we’ve added the ability to load your list of notes from the database and edit those notes, but what if you want to add a new note. In this lab we’ll add a button that allows you to create a new note from our app.</p>
+					<p>So far we’ve added the ability to load your list of notes from the database and edit those notes, but what if you want to add a new note. Add a button that allows you to create a new note from our app.</p>
 				</section>
 				<!-- Edit Note Body widget html -->
 				<section>
@@ -450,9 +451,9 @@ function to the Client Script field after line 13.</p>
 			<!-- Lab 4.2 Notes List Widget -->
 			<section>
 				<!--Goal-->
-				<section data-timing="60">
+				<section>
 					<h2>Lab 4.2</h2>
-					<p>In this lab you add a button to the note editor that triggers a delete of the note record.</p>
+					<p>Add a button to the note editor that triggers a delete of the note record.</p>
 				</section>
 				<!-- Edit Note Body widget server -->
 				<section>
