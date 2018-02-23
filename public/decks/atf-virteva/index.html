@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5/2 Developer Meetup</title>
+<meta charset="utf-8">
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    body {
+    font-family: 'Droid Serif';
+    }
+    h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 400;
+    margin-bottom: 0;
+    }
+    .remark-slide-content {
+    background-color:black;
+    }
+    * {
+    color:white;
+    }
+
+</style>
+</head>
+<body>
+<textarea id="source">
+class: center, middle
+
+# Welcome Servicenow Developer meetup!
+
+---
+
+# Automated Testing Framework: Test Smarter, Not Harder
+
+Authors: Mike Hedlund, Scott Halverson
+
+Original: https://goo.gl/hkkwEo
+
+Update set: <a download href="./ATF Demo Update Set.xml">ATF Demo Update Set.xml</a>
+
+---
+
+# What Rocks
+
+- Native and Easy
+- Trendy, makes us fit in with the Agile DevOps crowd
+- Removes the scare factor during upgrades
+- No extra $$
+- Speeds up continuous delivery
+- Rapidly improving capabilities
+
+---
+
+# What Doesn't Rock
+
+- Not yet support for Service Portal
+
+- Quirks still getting worked out
+
+- Managing versioning of the test configurations
+
+- Paradigm shift to having the testing tool be the same tool as what is being tested
+
+    - Upon new release is the testing tool broke or is it the application it’s testing?
+
+    - Running automatically when a new “build” is deployed has to be rethought, as their is no concept of a “build” in ServiceNow
+
+
+---
+
+# Key Components
+
+- Step Configs
+
+    - Form
+    - REST
+    - Server
+    - Service Catalog
+
+- Tests
+
+- Test Suites
+
+- Scheduling
+
+---
+
+# Demo &amp; Lab
+
+| Incident Requirement ID | Requirement |
+|----|----|
+| IM_001 | The 'ATF is Great' field shall be 'read-only' to all users. |
+| IM_002 | The 'ATF Demo Notes' field shall only be visible when the Category field has a value of 'ATF Demo'.|
+| IM_003 | The 'ATF Demo' button shall only be visible to Users with the 'atf_demo' role.|
+| IM_004 | A new section shall be added to the Incident form named 'ATF Demo'. This section will include the 'ATF is Great', and 'ATF demo notes' fields.|
+| IM_005 | A notification shall be sent to the 'Caller' when an Incident record is created.|
+
+---
+
+# ATF Lab - Automated Test Framework Properties
+
+- Navigate to the ‘Automated Test Framework’ application from the left Nav.
+
+- Under ‘Administration’ select the ‘Properties’ module. 
+
+- Under Test/Test Suite Properties Change the settings so Tests and Scheduled Tests are enabled.
+
+- Under Screenshots Capture Mode select ‘Enabled for failed steps’.
+
+---
+
+# ATF Lab - Create a Test for IM_001 1/5
+
+Step 1.01: Under the ‘Automated Test Framework’ Application select the ‘Test’ module.
+
+Step 1.02: Click the ‘New’ button and create the following Test:
+Name: (ATF) IM_001
+Description: The 'ATF is Great' field shall be 'read-only' to all users.
+
+Step 1.03: Click the ‘Add Test Step’ button. Select the ‘Server’ category and select ‘Impersonate’. Populate the following values and click ‘Submit’:
+User: ITIL User
+
+Step 1.04: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Open a New Form’ (Insert after Step 1). Populate the following and click ‘Submit’:
+Table: Incident
+
+Step 1.05: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Field State Validation’ (Insert after Step 2). Populate the following and click ‘Submit’:
+Read only: ATF is Great
+
+Step 1.06: Select the ‘Run Test’ button and confirm that all steps pass successfully.
+
+---
+
+# ATF Lab - Create a Test for IM_002 2/5
+
+Step 2.01: Under the ‘Automated Test Framework’ Application select the ‘Test’ module.
+
+Step 2.02: Click the ‘New’ button and create the following Test:
+Name: (ATF) IM_002
+Description: The 'ATF Demo Notes' field shall only be visible when the Category field has a value of 'ATF Demo'.
+
+Step 2.03: Click the ‘Add Test Step’ button. Select the ‘Server’ category and select ‘Impersonate’. Populate the following values and click ‘Submit’:
+User: ITIL User
+
+Step 2.04: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Open a New Form’ (Insert after Step 1). Populate the following and click ‘Submit’:
+Table: Incident
+
+---
+
+# ATF Lab - Create a Test for IM_002 3/5
+
+Step 2.05: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Set Field Values’ (Insert after Step 2). Populate the following and click ‘Submit’:
+Short description: Test
+Caller: ITIL User
+Category: Software
+
+Step 2.06: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Submit a Form’ (Insert after Step 3). Leave the Assert type as ‘Form submitted to server’ and click ‘Submit’.
+
+Step 2.07: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Open an Existing Record’ (Insert after Step 4). Next to the Record field select the ‘Cannonball’ icon. 
+
+Step 2.08: Reference the Record that was Submitted from step 4 (See screenshot on next slide)
+
+---
+
+# ATF Lab - Create a Test for IM_002 4/5
+
+<img src="./variables.png" width="800">
+
+---
+
+# ATF Lab - Create a Test for IM_002 5/5
+
+Step 2.09: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Field State Validation’ (Insert after Step 5). Populate the following and click ‘Submit’:
+Table: Incident
+Not visible: ATF demo notes
+
+Step 2.10: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Set Field Values’ (Insert after Step 6). Populate the following and click ‘Submit’:
+Short description: Test
+Caller: ITIL User
+Category: ATF Demo
+
+Step 2.11: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Field State Validation’ (Insert after Step 7). Populate the following and click ‘Submit’:
+Visible: ATF demo notes
+
+Step 2.12: Select the ‘Run Test’ button and confirm that all steps pass successfully.
+
+---
+# ATF Lab - Create a Test for IM_003 1/2
+
+Step 3.01: Under the ‘Automated Test Framework’ Application select the ‘Test’ module.
+
+Step 3.02: Click the ‘New’ button and create the following Test:
+Name: (ATF) IM_003
+Description: The 'ATF Demo' button shall only be visible to Users with the 'atf_demo' role.
+
+Step 3.03: Click the ‘Add Test Step’ button. Select the ‘Server’ category and select ‘Impersonate’. Populate the following values and click ‘Submit’:
+User: ITIL User
+
+Step 3.04: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘UI Action Visibility’ (Insert after Step 2). Populate the following and click ‘Submit’:
+Table: Incident
+Not visible: ATF Demo
+
+---
+
+# ATF Lab - Create a Test for IM_003 2/2
+
+Step 3.05: Click the ‘Add Test Step’ button. Select the ‘Server’ category and select ‘Impersonate’ (Insert after Step 3). Populate the following values and click ‘Submit’:
+User: Auto Test
+
+Step 3.06: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘Open a New Form’ (Insert after Step 4). Populate the following and click ‘Submit’:
+Table: Incident
+
+Step 3.07: Click the ‘Add Test Step’ button. Select the ‘Form’ category and select ‘UI Action Visibility’ (Insert after Step 3). Populate the following and click ‘Submit’:
+Table: Incident
+Visible: ATF Demo
+
+Step 3.08: Select the ‘Run Test’ button and confirm that all steps pass successfully.
+
+---
+
+# ATF Lab - Create a Test for IM_004
+
+Step 4.01: Under the ‘Automated Test Framework’ Application select the ‘Test’ module.
+
+Step 4.02: Click the ‘New’ button and create the following Test:
+Name: (ATF) IM_004
+
+Step 4.03: Click the ‘Add Test Step’ button. Select the ‘Server’ category and select ‘Record Query’. Populate the following and click ‘Submit’:
+Table: ‘IS’ sys_ui_section
+Caption: ‘IS’ ATF Demo
+
+Step 4.04: Click the ‘Add Test Step’ button. Select the ‘Server’ category and select ‘Record Query’. (Insert after step 1) Populate the following and click ‘Submit’:
+Table: ‘IS’ sys_ui_element
+Element: ‘IS’ u_atf_is_great
+Sys UI Section.table ‘IS’ incident
+Sys UI Section: ‘IS’ ATF Demo
+
+Step 4.05: Repeat Step 31 but make the following change:
+Element: ‘IS’ u_atf_demo_notes
+
+Step 4.06: Select the ‘Run Test’ button and confirm that all steps pass successfully.
+
+
+
+
+---
+# ATF Lab - Create a Test for IM_005
+
+Step 5.01: Under the ‘Automated Test Framework’ Application select the ‘Test’ module.
+
+Step 5.02: Click the ‘New’ button and create the following Test:
+Name: (ATF) IM_005
+
+Step 5.03: Impersonate User: ITIL User
+
+Step 5.04: Open a new Incident form.
+
+Step 5.05: Set Field Values:
+Short description: Test
+Caller: Auto Test
+
+Step 5.06: Submit the form.
+
+Step 5.07: Select the custom test config (ATF Demo) Notification Check and populate the following:
+Notification: Incident opened for me
+Document: Select the record that was created in Step 4 (Use the ‘Cannonball’ icon)
+Recipients: auto.test@example.com
+
+Step 5.08: Select the ‘Run Test’ button and confirm that all steps pass successfully.
+
+
+---
+# Create and run the IM Test Suite 1/2
+
+Step 5.09: Under the ‘Automated Test Framework’ Application select the ‘Suites’ module and click the ‘New’ button.
+
+Step 5.10: Enter the following and click the ‘Save’ button:
+Name: IM Test Suite
+Description: ATF Demo
+
+Step 5.11: Under the ‘Test Suite Tests’ related list click the ‘New’ button.
+
+Step 5.12: Repeat the previous step until each of the 5 individual Tests you created are added to the IM Test Suite.
+
+---
+# Create and run the IM Test Suite 2/2
+
+Step 5.13: Select the ‘Run Test Suite’ button and confirm that all Tests pass successfully.
+
+<img src="./run-tests.png" width="800">
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create();
+</script>
+</body>
+</html>

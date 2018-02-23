@@ -1,0 +1,19 @@
+<div class="panel panel-default" ng-show="c.data.noteID">
+  <div class="panel-heading clearfix">
+    <div class="row">
+      <div class="col-md-10">
+        <input id="note-title" 
+               ng-model="c.data.title" 
+               ng-change="c.updateNote('title')"
+               ng-model-options="{debounce: 1000}" />
+       </div>
+     </div>
+   </div>
+   <div class="panel-body">
+     <textarea id="note-body" 
+               ng-model="c.data.note" 
+               ng-change="c.updateNote('body')"
+               ng-model-options="{debounce: 1000}" 
+               ng-keyup="c.autoExpand($event)"></textarea>
+  </div>
+</div>

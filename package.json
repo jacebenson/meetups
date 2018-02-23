@@ -1,0 +1,23 @@
+{
+  "name": "meetups",
+  "version": "1.0.0",
+  "description": "<!-- START doctoc generated TOC please keep comment here to allow auto update --> <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/browser-sync start --server 'public' --watch",
+    "deploy": "git subtree push --prefix public origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sndevs/meetups.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sndevs/meetups/issues"
+  },
+  "homepage": "https://github.com/sndevs/meetups#readme",
+  "dependencies": {
+    "browser-sync": "^2.23.6"
+  }
+}
