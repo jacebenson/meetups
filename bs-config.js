@@ -16,25 +16,20 @@ module.exports = {
     "ui": {
         "port": 3001
     },
-    files: [
-        "./css/*.css",
-        "./js/*.js",
-        "./index.html"
-    ],
-    "watchEvents": [
+    files: "/public/**",
+    watchEvents: [
         "change"
     ],
-    "watch": false,
-    "ignore": [],
-    "single": false,
-    "watchOptions": {
+    watch: false,
+    ignore: [],
+    single: false,
+    watchOptions: {
         "ignoreInitial": true
     },
     serveStatic: [{
-        route: './',
+        route: '/public',
         dir: 'public'
- }],
-
+    }],
     "proxy": false,
     "port": 3000,
     "middleware": false,
@@ -49,36 +44,36 @@ module.exports = {
             "toggles": true
         }
     },
-    "logLevel": "info",
-    "logPrefix": "Browsersync",
-    "logConnections": false,
-    "logFileChanges": true,
-    "logSnippet": true,
-    "rewriteRules": [],
-    "open": "local",
-    "browser": "default",
-    "cors": false,
-    "xip": false,
-    "hostnameSuffix": false,
-    "reloadOnRestart": false,
-    "notify": true,
-    "scrollProportionally": true,
-    "scrollThrottle": 0,
-    "scrollRestoreTechnique": "window.name",
-    "scrollElements": [],
-    "scrollElementMapping": [],
-    "reloadDelay": 0,
-    "reloadDebounce": 500,
-    "reloadThrottle": 0,
-    "plugins": [],
-    "injectChanges": true,
-    "startPath": null,
-    "minify": true,
-    "host": null,
-    "localOnly": false,
-    "codeSync": true,
-    "timestamps": true,
-    "clientEvents": [
+    logLevel: "info",
+    logPrefix: "Browsersync",
+    logConnections: false,
+    logFileChanges: true,
+    logSnippet: true,
+    rewriteRules: [],
+    open: "local",
+    browser: "default",
+    cors: false,
+    xip: false,
+    hostnameSuffix: false,
+    reloadOnRestart: false,
+    notify: true,
+    scrollProportionally: true,
+    scrollThrottle: 0,
+    scrollRestoreTechnique: "window.name",
+    scrollElements: [],
+    scrollElementMapping: [],
+    reloadDelay: 0,
+    reloadDebounce: 500,
+    reloadThrottle: 0,
+    plugins: [],
+    injectChanges: true,
+    startPath: null,
+    minify: true,
+    host: null,
+    localOnly: false,
+    codeSync: true,
+    timestamps: true,
+    clientEvents: [
         "scroll",
         "scroll:element",
         "input:text",
@@ -87,7 +82,7 @@ module.exports = {
         "form:reset",
         "click"
     ],
-    "socket": {
+    socket: {
         "socketIoOptions": {
             "log": false
         },
@@ -101,7 +96,7 @@ module.exports = {
             "heartbeatTimeout": 5000
         }
     },
-    "tagNames": {
+    tagNames: {
         "less": "link",
         "scss": "link",
         "css": "link",
