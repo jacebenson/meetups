@@ -1,0 +1,4 @@
+<a 
+  class="list-group-item" 
+  ng-click="c.selectItem($index);" 
+  ng-repeat="note in data.notes">

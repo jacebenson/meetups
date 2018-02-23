@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2017-09-12 16:05:26">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>ATF Meetup Demo</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>3ed2234fdb4103003e8c72ffbf9619e0</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>56bdbb17db8103003e8c72ffbf961903</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_incident_u_atf_is_great</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="u_atf_is_great" table="incident"><active>true</active><array>false</array><array_denormalized>false</array_denormalized><attributes/><audit>false</audit><calculation/><choice/><choice_field/><choice_table/><column_label>ATF is Great</column_label><comments/><create_roles/><default_value>true</default_value><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>u_atf_is_great</element><element_reference>false</element_reference><foreign_database/><internal_type display_value="">boolean</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>incident</name><next_element/><primary>false</primary><read_only>true</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><sizeclass/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:08:37</sys_created_on><sys_id>4a8933c7db8103003e8c72ffbf961948</sys_id><sys_mod_count>8</sys_mod_count><sys_name>ATF is Great</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_dictionary_incident_u_atf_is_great</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:25:57</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+<payload_hash>-978523810</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>12bd3f17db8103003e8c72ffbf961973</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e730c93f90000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>Incident.ATF is Great</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_guid>323b80dfb6810300e7e64a036afef8cd</update_guid>
+<update_guid_history>323b80dfb6810300e7e64a036afef8cd:-978523810,311bc89f668103001c1f16ccdf3596fe:1064801984,e89ac89f728103009c9693bea2d015f4:1217311003,b55a489f9881030070b301d12815100e:563078394,062a849f5c8103000de9c9b0a452d853:-341775615,aa1a049f52810300914f8dbd3b0ff0f9:1087379554,53e9009fa081030086f63c9baad3a06e:771116637,e2d9009f58810300b42257d4a4af6d64:-1996246467,428973c72681030079b4c409ccc01c6c:-184508489</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>atf_input_variable_7adb1d97db88fe0079c670adbf961937</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="atf_input_variable"&gt;&lt;atf_input_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.automated_testing_framework.ATFVariableElementMapper&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Document&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;u_document&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;help/&gt;&lt;hint&gt;The record that the notification should have been fired against.&lt;/hint&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Document&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="(ATF Demo) Notification Check"&gt;cf43dd93db88fe0079c670adbf96193a&lt;/model&gt;&lt;model_id&gt;cf43dd93db88fe0079c670adbf96193a&lt;/model_id&gt;&lt;model_table/&gt;&lt;name&gt;var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;atf_input_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;tyler.coons&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-01-06 15:07:14&lt;/sys_created_on&gt;&lt;sys_id&gt;7adb1d97db88fe0079c670adbf961937&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Document&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;atf_input_variable_7adb1d97db88fe0079c670adbf961937&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-09-12 14:48:26&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/atf_input_variable&gt;&lt;/record_update&gt;</payload>
+<payload_hash>424339465</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>12bdbb17db8103003e8c72ffbf961904</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e76900fe90000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table/>
+<target_name>Document</target_name>
+<type>Input Variables</type>
+<update_domain>global</update_domain>
+<update_guid>ea1cef5bb9410300e849d03c4566b135</update_guid>
+<update_guid_history>ea1cef5bb9410300e849d03c4566b135:424339465,381caf5b25410300a435b1a4488136cc:-1454076862,1abba35bfe410300351ad53ed78f9a45:406297821</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_d6c77f47db8103003e8c72ffbf961922</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_user"><sys_user action="INSERT_OR_UPDATE"><accumulated_roles/><active>true</active><building/><calendar_integration>1</calendar_integration><city/><company display_value="ACME South America">227cdfb03710200044e0bfc8bcbe5d6b</company><cost_center display_value="Engineering">d9d07bddc0a80a647cf932056ed24652</cost_center><country/><date_format/><default_perspective/><department display_value="Development">221f3db5c6112284009f4becd3039cc9</department><edu_status>faculty</edu_status><email>auto.test@example.com</email><employee_number/><failed_attempts/><first_name>Auto</first_name><gender>Male</gender><home_phone/><internal_integration_user>false</internal_integration_user><introduction/><last_login/><last_login_device/><last_login_time/><last_name>Test</last_name><last_password/><ldap_server/><location display_value="SHS quadra 5, Bloco E., Brasilia">25b3d04b0a0a0bb300176b546c22db27</location><locked_out>false</locked_out><manager/><middle_name/><mobile_phone/><name>Auto Test</name><notification>2</notification><password_needs_reset>false</password_needs_reset><phone/><photo/><preferred_language/><roles/><schedule/><source/><state/><street/><sys_class_name>sys_user</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:00:59</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d6c77f47db8103003e8c72ffbf961922</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:00:59</sys_updated_on><time_format/><time_zone/><title/><user_name>auto.test</user_name><user_password>6FdqEnIbQq</user_password><vip>false</vip><web_service_access_only>false</web_service_access_only><zip/></sys_user></record_update>]]></payload>
+<payload_hash>1005391463</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>16bd3f17db8103003e8c72ffbf961975</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e72c00d750000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table/>
+<target_name>Auto Test</target_name>
+<type>User</type>
+<update_domain>global</update_domain>
+<update_guid>2a1833873e810300ce2768d2d1def3eb</update_guid>
+<update_guid_history>2a1833873e810300ce2768d2d1def3eb:1005391463</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_form_sections_991f87290a0006414b6521d3fa9b4176</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_form_sections form_id="991f87290a0006414b6521d3fa9b4176" sys_domain="global" table="incident" version="3"><sys_ui_form_section action="INSERT_OR_UPDATE"><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2011-04-27 22:41:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>991f888c0a00064130d724ce9e28aedf</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_ui_form display_value="incident" name="incident" sys_domain="global" view="Default view">991f87290a0006414b6521d3fa9b4176</sys_ui_form><sys_ui_section caption="NULL" display_value="" name="incident" sys_domain="global" view="Default view">bf1d96e3c0a801640190725e63f8ac80</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2011-04-27 22:42:58</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2011-04-27 22:41:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>991f89480a00064134a8172add919832</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_ui_form display_value="incident" name="incident" sys_domain="global" view="Default view">991f87290a0006414b6521d3fa9b4176</sys_ui_form><sys_ui_section caption="Notes" display_value="Notes" name="incident" sys_domain="global" view="Default view">991f88d20a00064127420bc37824d385</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2011-04-27 22:42:58</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2011-04-27 22:41:36</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>991feccf0a0006412ce551cc85c5d5bb</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_ui_form display_value="incident" name="incident" sys_domain="global" view="Default view">991f87290a0006414b6521d3fa9b4176</sys_ui_form><sys_ui_section caption="Related Records" display_value="Related Records" name="incident" sys_domain="global" view="Default view">991fec850a0006417c9edda2d4e9c487</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2011-04-27 22:42:58</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2011-04-27 22:42:21</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>992099f30a0006412ee11b6059d63900</sys_id><sys_mod_count>1</sys_mod_count><sys_overrides/><sys_ui_form display_value="incident" name="incident" sys_domain="global" view="Default view">991f87290a0006414b6521d3fa9b4176</sys_ui_form><sys_ui_section caption="Resolution Information" display_value="Resolution Information" name="incident" sys_domain="global" view="Default view">992099dd0a0006413c77c9a4b7d410c0</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2011-04-27 22:42:58</sys_updated_on></sys_ui_form_section><sys_ui_form_section action="INSERT_OR_UPDATE"><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:06:17</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>fbf87f87db8103003e8c72ffbf961997</sys_id><sys_mod_count>0</sys_mod_count><sys_overrides/><sys_ui_form display_value="incident" name="incident" sys_domain="global" view="Default view">991f87290a0006414b6521d3fa9b4176</sys_ui_form><sys_ui_section caption="ATF Demo" display_value="ATF Demo" name="incident" sys_domain="global" view="Default view">3ff8bb87db8103003e8c72ffbf96196b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:06:17</sys_updated_on></sys_ui_form_section><sys_ui_form action="INSERT_OR_UPDATE"><name>incident</name><roles/><sys_class_name>sys_ui_form</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2011-04-27 22:41:10</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>991f87290a0006414b6521d3fa9b4176</sys_id><sys_mod_count>0</sys_mod_count><sys_name>incident</sys_name><sys_overrides/><sys_package display_value="Upgrade content for 2011 - activated only for new instances" source="upgrade.2011_common_practice">171d43cee04332003399186128118f50</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_form_sections_991f87290a0006414b6521d3fa9b4176</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2011-04-27 22:41:10</sys_updated_on><sys_user/><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_form></sys_ui_form_sections></record_update>]]></payload>
+<payload_hash>-1836935754</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>1abd3f17db8103003e8c72ffbf961974</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e72c3a4870000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>Incident</target_name>
+<type>Form Sections</type>
+<update_domain>global</update_domain>
+<update_guid>fbf87f8730810300f33a007da83e609b</update_guid>
+<update_guid_history>fbf87f8730810300f33a007da83e609b:-1836935754,7bf87f875f810300fd1f970a9f5e3499:-1836935754,37f87f873a8103000a3b9dc4ba501c97:1345580640</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a_u_notification_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="u_notification" label="Notification" language="en" table="var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a"><sys_documentation action="INSERT_OR_UPDATE"><element>u_notification</element><help/><hint>The definition of the expected notification.</hint><label>Notification</label><language>en</language><name>var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a</name><plural>Notification</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-12 14:47:57</sys_created_on><sys_id>67fb6f5bdb4103003e8c72ffbf961975</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Notification</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_documentation_var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a_u_notification_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-12 14:47:57</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<payload_hash>307998002</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>1ebd3f17db8103003e8c72ffbf961973</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e768f9f890000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a</table>
+<target_name>.Notification</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_guid>ebfb6f5bba410300da84ca5dd4a55f78</update_guid>
+<update_guid_history>ebfb6f5bba410300da84ca5dd4a55f78:307998002</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_choice_incident_category</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_choice action="INSERT_OR_UPDATE" field="category" table="incident" version="3"><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>category</element><hint/><inactive>true</inactive><label>-TBDTARGET-incident</label><language>en</language><name>incident</name><sequence>0</sequence><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 22:34:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>014dc013dbc103003e8c72ffbf96190a</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:34:51</sys_updated_on><value>-TBDTARGET-incident</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>category</element><hint/><inactive>false</inactive><label>Inquiry / Help</label><language>en</language><name>incident</name><sequence>0</sequence><sys_created_by>system</sys_created_by><sys_created_on>2017-06-01 05:07:53</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c67b0346e04332003399186128118fe9</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:34:51</sys_updated_on><value>inquiry</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>category</element><hint/><inactive>false</inactive><label>Software</label><language>en</language><name>incident</name><sequence>1</sequence><sys_created_by>system</sys_created_by><sys_created_on>2017-06-01 05:07:53</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0a7b0346e04332003399186128118fe9</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:34:51</sys_updated_on><value>software</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>category</element><hint/><inactive>false</inactive><label>Hardware</label><language>en</language><name>incident</name><sequence>2</sequence><sys_created_by>system</sys_created_by><sys_created_on>2017-06-01 05:07:53</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>4a7b0346e04332003399186128118fe9</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:34:51</sys_updated_on><value>hardware</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>category</element><hint/><inactive>false</inactive><label>Network</label><language>en</language><name>incident</name><sequence>3</sequence><sys_created_by>system</sys_created_by><sys_created_on>2017-06-01 05:07:53</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>8a7b0346e04332003399186128118fe9</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:34:51</sys_updated_on><value>network</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>category</element><hint/><inactive>false</inactive><label>Database</label><language>en</language><name>incident</name><sequence>4</sequence><sys_created_by>system</sys_created_by><sys_created_on>2017-06-01 05:07:53</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ca7b0346e04332003399186128118fe9</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:34:51</sys_updated_on><value>database</value></sys_choice><sys_choice action="INSERT_OR_UPDATE"><dependent_value/><element>category</element><hint/><inactive>false</inactive><label>ATF Demo</label><language>en</language><name>incident</name><sequence>5</sequence><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 22:34:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>894dc013dbc103003e8c72ffbf961907</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:34:51</sys_updated_on><value>ATF Demo</value></sys_choice><sys_choice_set action="INSERT_OR_UPDATE"><element>category</element><name>incident</name><sys_class_name>sys_choice_set</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2017-06-01 05:07:53</sys_created_on><sys_id>ce7b0346e04332003399186128118fe9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>category</sys_name><sys_package display_value="Incident" source="com.snc.incident">b97b0346e04332003399186128118f7b</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_choice_incident_category</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2017-06-01 05:07:53</sys_updated_on></sys_choice_set></sys_choice></record_update>]]></payload>
+<payload_hash>-221113041</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>1ebdbb17db8103003e8c72ffbf961904</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e7314b8520000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>Incident.Category</target_name>
+<type>Choice list</type>
+<update_domain>global</update_domain>
+<update_guid>094dc0131ac10300c69f1f2472f4260d</update_guid>
+<update_guid_history>094dc0131ac10300c69f1f2472f4260d:-221113041</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_section_3ff8bb87db8103003e8c72ffbf96196b</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="ATF Demo" section_id="3ff8bb87db8103003e8c72ffbf96196b" sys_domain="global" table="incident" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>u_atf_is_great</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:08:38</sys_created_on><sys_id>8a8973c7db8103003e8c72ffbf961970</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="ATF Demo" display_value="ATF Demo" name="incident" sys_domain="global" view="Default view">3ff8bb87db8103003e8c72ffbf96196b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:08:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>u_atf_demo_notes</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:08:38</sys_created_on><sys_id>828973c7db8103003e8c72ffbf961971</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="ATF Demo" display_value="ATF Demo" name="incident" sys_domain="global" view="Default view">3ff8bb87db8103003e8c72ffbf96196b</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:08:38</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>ATF Demo</caption><header>false</header><name>incident</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:06:17</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3ff8bb87db8103003e8c72ffbf96196b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ATF Demo</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_section_3ff8bb87db8103003e8c72ffbf96196b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:06:17</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+<payload_hash>-994328957</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>52bd3f17db8103003e8c72ffbf961975</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e72c5c89c0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>Incident</target_name>
+<type>Form Layout</type>
+<update_domain>global</update_domain>
+<update_guid>868973c7a1810300f17f5464d3853e72</update_guid>
+<update_guid_history>868973c7a1810300f17f5464d3853e72:-994328957</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_9c4e0c13dbc103003e8c72ffbf961962</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action"><sys_ui_action action="INSERT_OR_UPDATE"><action_name/><active>true</active><client>false</client><comments/><condition>gs.hasRole('atf_demo')</condition><form_action>true</form_action><form_button>true</form_button><form_context_menu>false</form_context_menu><form_link>false</form_link><form_style/><hint/><list_action>false</list_action><list_banner_button>false</list_banner_button><list_button>false</list_button><list_choice>false</list_choice><list_context_menu>false</list_context_menu><list_link>false</list_link><list_save_with_form_button>false</list_save_with_form_button><list_style/><name>ATF Demo</name><onclick/><order>100</order><script/><show_insert>true</show_insert><show_multiple_update>false</show_multiple_update><show_query>false</show_query><show_update>true</show_update><sys_class_name>sys_ui_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 22:40:02</sys_created_on><sys_domain>global</sys_domain><sys_domain_path/><sys_id>9c4e0c13dbc103003e8c72ffbf961962</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ATF Demo</sys_name><sys_overrides/><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_action_9c4e0c13dbc103003e8c72ffbf961962</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:40:02</sys_updated_on><table>incident</table><ui11_compatible>true</ui11_compatible><ui16_compatible>false</ui16_compatible></sys_ui_action></record_update>]]></payload>
+<payload_hash>-113188605</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>56bd3f17db8103003e8c72ffbf961974</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e731979360000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>ATF Demo</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_guid>897e4c1338c103005d0fc0c8c1c583c5</update_guid>
+<update_guid_history>897e4c1338c103005d0fc0c8c1c583c5:-113188605</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a_u_document_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="u_document" label="Document" language="en" table="var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a"><sys_documentation action="INSERT_OR_UPDATE"><element>u_document</element><help/><hint>The record that the notification should have been fired against.</hint><label>Document</label><language>en</language><name>var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a</name><plural>Document</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-12 14:48:18</sys_created_on><sys_id>2c1caf5bdb4103003e8c72ffbf9619c7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Document</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_documentation_var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a_u_document_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-12 14:48:18</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<payload_hash>1514660088</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>5abd3f17db8103003e8c72ffbf961973</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e768ff2ba0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a</table>
+<target_name>.Document</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_guid>2c1caf5be04103003e1f281f262f85ca</update_guid>
+<update_guid_history>2c1caf5be04103003e1f281f262f85ca:1514660088</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>atf_input_variable_12d45d17db88fe0079c670adbf961956</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="atf_input_variable"&gt;&lt;atf_input_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.automated_testing_framework.ATFVariableElementMapper&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Notification&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;u_notification&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;help/&gt;&lt;hint&gt;The definition of the expected notification.&lt;/hint&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Notification&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="(ATF Demo) Notification Check"&gt;cf43dd93db88fe0079c670adbf96193a&lt;/model&gt;&lt;model_id&gt;cf43dd93db88fe0079c670adbf96193a&lt;/model_id&gt;&lt;model_table/&gt;&lt;name&gt;var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sysevent_email_action"&gt;sysevent_email_action&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;atf_input_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;tyler.coons&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-01-06 14:34:55&lt;/sys_created_on&gt;&lt;sys_id&gt;12d45d17db88fe0079c670adbf961956&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Notification&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;atf_input_variable_12d45d17db88fe0079c670adbf961956&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-09-12 14:48:07&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/atf_input_variable&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1557438157</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>5abdbb17db8103003e8c72ffbf961903</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e768fc68c0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table/>
+<target_name>Notification</target_name>
+<type>Input Variables</type>
+<update_domain>global</update_domain>
+<update_guid>710caf5b66410300aad982636452943b</update_guid>
+<update_guid_history>710caf5b66410300aad982636452943b:1557438157,abfb6f5ba4410300566866d063caa57a:-1788339276,b26ba75b884103008a25d4d566f3b1ee:1020520425</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_atf_step_config_cf43dd93db88fe0079c670adbf96193a</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_atf_step_config"&gt;&lt;sys_atf_step_config action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;batch_order_constraint/&gt;&lt;category display_value="Server"&gt;317c4dc20b202200a8d7a12cf6673aa8&lt;/category&gt;&lt;class_name/&gt;&lt;class_type&gt;script&lt;/class_type&gt;&lt;description_generator&gt;&lt;![CDATA[function generateDescription() {	
+	var descriptionGenerator = new ATFStepDescriptionGenerator();
+	var description = gs.getMessage("There should be at least one notification of '{0}' related to '{1}' for the following recipients: '{2}'",
+								   [step.inputs.u_notification.name,
+									step.inputs.u_document.getDisplayValue(),
+									step.inputs.u_recipients]);
+	
+	return description;
+}
+ generateDescription();
+]]&gt;&lt;/description_generator&gt;&lt;html_description&gt;&lt;![CDATA[&lt;p&gt;Pauses for 30 seconds to give any triggered notifications time to generate, then performs a database query to verify if a notification matching the conditions set in this step are met.&lt;/p&gt;]]&gt;&lt;/html_description&gt;&lt;icon&gt;icon-article-document&lt;/icon&gt;&lt;inputs/&gt;&lt;name&gt;(ATF Demo) Notification Check&lt;/name&gt;&lt;order&gt;45&lt;/order&gt;&lt;outputs/&gt;&lt;step_env display_value="Server - Independent"&gt;6c2bcea1870312009dccc9ded0e3ecca&lt;/step_env&gt;&lt;step_execution_generator&gt;&lt;![CDATA[//The inputs are a map of the variables defined in the inputs related list below.
+//Inputs are consumed in the step configuration. Input
+//values may be hardcoded or mapped from the outputs of a previous step.
+//If a test author using your step uses mapping to pass in an output from a previous 
+//test step then when referencing the input variable the mapping will be resolved 
+//automatically
+// Example:
+//  var myRecords = new GlideRecord(inputs.table);
+//
+//The outputs are a map of the variables defined in the outputs related list.
+//Outputs should be set (assigned) in order to pass data out of a test step that
+//can be consumed my mapping as an input to subsequent steps. 
+// Example:
+//  outputs.table = gr.getRecordClassName()
+//
+//
+//Note that inputs and outputs are strongly typed as defined in their variable definition.
+//Their behavior is the same as a dictionary defined field of the same type in a table.
+//
+//The stepResult is a simple API for controlling the step pass/fail and logging with three
+//methods:
+// stepResult.setFailed: Causes step to fail
+//
+// stepResult.setSuccess: Causes step to succeed
+//
+// stepResult.setOutputMessage: Outputs logging to step results (works pass or fail)
+//         Can only be called once or will overwrite previous 
+//         message
+//
+//If neither setFailed or setSuccess is called the default is to succeed.
+//
+//See 'Record Query' for an example of a scripted step config 
+//and 'Check change approvals get generated' 
+//
+(function executeStep(inputs, outputs, stepResult) {
+	if( gs.nil(inputs.u_notification) || gs.nil(inputs.u_document) || (gs.nil(inputs.u_recipients) &amp;&amp; gs.nil(inputs.u_recipient_group)) ) {
+		stepResult.setOutputMessage(gs.getMessage("One of the input variables was not populated"));
+		stepResult.setFailed();
+		return;
+	}
+	var recipients = [];
+	if(!gs.nil(inputs.u_recipient_group)){
+		var grec = new GlideRecord('sys_user_grmember');
+		grec.addQuery('group', inputs.u_recipient_group);
+		grec.addQuery('user.active', true);
+		grec.query();
+		while(grec.next()){
+			var nd = new GlideRecord('cmn_notif_device');
+			nd.addQuery('user', grec.user);
+			nd.addQuery('type', 'Email');
+			nd.addActiveQuery();
+			nd.addQuery('primary_email', true);
+			nd.query();
+			if(nd.next()){
+				recipients.push(nd.email_address.toString());
+			}
+		}
+	}
+	recipients = recipients.join(',') + inputs.u_recipients;
+	var attempts = 12;
+	var sleepInt = 5;
+	var success = false;
+	
+	for( var i = 0; i &lt; attempts; i++ ) {
+		
+		if( checkForNotification( inputs.u_notification, inputs.u_document, recipients ) == true ) {
+			success = true;
+			break;
+		} else {
+			gs.sleep(sleepInt * 1000);
+		}
+	}
+	
+	if( success ) {
+		stepResult.setOutputMessage(gs.getMessage("Notification found with all expected recipient email addresses"));
+		stepResult.setSuccess();
+	} else {
+		stepResult.setOutputMessage(gs.getMessage("No notification matching the submitted criteria found"));
+		stepResult.setFailed();
+	}
+	
+	
+}(inputs, outputs, stepResult));
+	
+function checkForNotification( notification, document, recipients ) {
+	
+	//Query for an email log record related to the passed-in notification and related record
+	var query = new GlideRecord('sys_email_log');
+	query.addQuery('notification', notification);
+	query.addQuery('email.instance', document);
+	query.orderByDesc('sys_created_on');
+	query.query();
+	
+	if( !query.next() ) {
+		
+		return( false );
+		
+	} else {
+		
+		var expectedRecip = recipients.split(',');
+		var recordRecip = query.email.recipients.toString().toLowerCase();
+		var missingRecip = '';
+		
+		//Walks through the list of expected recipient emails.  If one or more are not included in the notification's recipient list,
+		// compiles a list of missing users and logs this to the output.
+		for( var i = 0; i &lt; expectedRecip.length; i++ ) {
+			if( !recordRecip.includes(expectedRecip[i].toString().toLowerCase()) )  {
+				if( missingRecip == '' ) {
+					missingRecip = expectedRecip[i];
+				} else {
+					missingRecip = missingRecip + ', ' + expectedRecip[i];
+				}
+			}
+		}
+		
+		if( missingRecip != '' ) {
+			return( false );
+		} else {
+			return( true );
+		}
+	}
+}
+]]&gt;&lt;/step_execution_generator&gt;&lt;sys_class_name&gt;sys_atf_step_config&lt;/sys_class_name&gt;&lt;sys_created_by&gt;tyler.coons&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-01-06 14:31:06&lt;/sys_created_on&gt;&lt;sys_id&gt;cf43dd93db88fe0079c670adbf96193a&lt;/sys_id&gt;&lt;sys_mod_count&gt;25&lt;/sys_mod_count&gt;&lt;sys_name&gt;(ATF Demo) Notification Check&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_atf_step_config_cf43dd93db88fe0079c670adbf96193a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-09-12 14:42:48&lt;/sys_updated_on&gt;&lt;template_reminder&gt;Watch for the specified notification.&lt;/template_reminder&gt;&lt;type display_value="Test Step" name="sys_atf_step"&gt;492ec746e08332003399186128118fd7&lt;/type&gt;&lt;wizard_redirect/&gt;&lt;/sys_atf_step_config&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=cf43dd93db88fe0079c670adbf96193a"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=cf43dd93db88fe0079c670adbf96193a"/&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1421817332</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>5abdbb17db8103003e8c72ffbf961904</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e768ae87a0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table/>
+<target_name>(ATF Demo) Notification Check</target_name>
+<type>Test Step Config</type>
+<update_domain>global</update_domain>
+<update_guid>c0da6b1b8941030099cc2988c33d66cf</update_guid>
+<update_guid_history>c0da6b1b8941030099cc2988c33d66cf:1421817332,8ce1dc9395c10300c4211d1d9008243d:1271362430,17711c93a1c1030097cb4ae3ea181d16:-1955416950,da61d8938ac103004c6b5be95de87438:2061377869,2d51989321c103001c23b53d2ff2483d:362641365</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a_u_recipient_group_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="u_recipient_group" label="Recipient Group" language="en" table="var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a"><sys_documentation action="INSERT_OR_UPDATE"><element>u_recipient_group</element><help/><hint/><label>Recipient Group</label><language>en</language><name>var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a</name><plural>Recipient Group</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-12 14:48:54</sys_created_on><sys_id>d93c239bdb4103003e8c72ffbf9619cf</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Recipient Group</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_documentation_var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a_u_recipient_group_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-12 14:48:54</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<payload_hash>-1478230516</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>92bd3f17db8103003e8c72ffbf961974</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e76907d790000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a</table>
+<target_name>.Recipient Group</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_guid>d93c239bab410300e6664cd5fe0a31d2</update_guid>
+<update_guid_history>d93c239bab410300e6664cd5fe0a31d2:-1478230516</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_incident_u_atf_is_great_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="u_atf_is_great" label="ATF is Great" language="en" table="incident"><sys_documentation action="INSERT_OR_UPDATE"><element>u_atf_is_great</element><help/><hint/><label>ATF is Great</label><language>en</language><name>incident</name><plural>ATF is Greats</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:08:37</sys_created_on><sys_id>ce8933c7db8103003e8c72ffbf96194c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ATF is Great</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_documentation_incident_u_atf_is_great_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:08:37</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<payload_hash>-204313089</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>96bd3f17db8103003e8c72ffbf961973</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e72c5c8550000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>Incident.ATF is Great</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_guid>4e8973c756810300be79966e72982f6e</update_guid>
+<update_guid_history>4e8973c756810300be79966e72982f6e:-204313089</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>atf_input_variable_db6ee63c136dbe80a14eb53a6144b011</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="atf_input_variable"&gt;&lt;atf_input_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.automated_testing_framework.ATFVariableElementMapper&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Recipient Group&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;u_recipient_group&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Recipient Group&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="(ATF Demo) Notification Check"&gt;cf43dd93db88fe0079c670adbf96193a&lt;/model&gt;&lt;model_id&gt;cf43dd93db88fe0079c670adbf96193a&lt;/model_id&gt;&lt;model_table/&gt;&lt;name&gt;var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;200&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_user_group"&gt;sys_user_group&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;atf_input_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;brian.paul@maryville.com&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-03-14 16:15:14&lt;/sys_created_on&gt;&lt;sys_id&gt;db6ee63c136dbe80a14eb53a6144b011&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Recipient Group&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;atf_input_variable_db6ee63c136dbe80a14eb53a6144b011&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-09-12 14:49:01&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/atf_input_variable&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1530451190</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>96bdbb17db8103003e8c72ffbf961904</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e7690993c0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table/>
+<target_name>Recipient Group</target_name>
+<type>Input Variables</type>
+<update_domain>global</update_domain>
+<update_guid>8b3c639bdb410300fd3d57b08c743d6a</update_guid>
+<update_guid_history>8b3c639bdb410300fd3d57b08c743d6a:1530451190,593c239bd84103009705609ed9cbc0d4:-1113583761,e1dbeb5b6241030075c8d8a9faf03b25:-1948539018</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_role_75d77387db8103003e8c72ffbf9619d5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description>Role for ATF Demo Lab.</description><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>atf_demo</name><suffix/><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:01:39</sys_created_on><sys_id>75d77387db8103003e8c72ffbf9619d5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>atf_demo</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_user_role_75d77387db8103003e8c72ffbf9619d5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:01:39</sys_updated_on></sys_user_role></record_update>]]></payload>
+<payload_hash>885867107</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>9abd3f17db8103003e8c72ffbf961975</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e72bf66be0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table/>
+<target_name>atf_demo</target_name>
+<type>Role</type>
+<update_domain>global</update_domain>
+<update_guid>c8f7bbc33181030063dca7398051f31e</update_guid>
+<update_guid_history>c8f7bbc33181030063dca7398051f31e:885867107</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_policy_ff709093dbc103003e8c72ffbf96198c</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions table="incident"&gt;category=ATF Demo^EQ&lt;item endquery="false" field="category" goto="false" newquery="false" operator="=" or="false" value="ATF Demo"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/conditions&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Category is ATF Demo&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-09-11 22:49:37&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;ff709093dbc103003e8c72ffbf96198c&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Category is ATF Demo&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_ff709093dbc103003e8c72ffbf96198c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-09-11 22:49:57&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-2115304622</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>9ebd3f17db8103003e8c72ffbf961974</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e73228c9e0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>Category is ATF Demo</target_name>
+<type>UI Policy</type>
+<update_domain>global</update_domain>
+<update_guid>56b05c53dbc103007dc59caa4220ce57</update_guid>
+<update_guid_history>56b05c53dbc103007dc59caa4220ce57:-2115304622,6da098532dc10300df403e47f5b9293f:-1211681396</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_incident_u_atf_demo_notes_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="u_atf_demo_notes" label="ATF demo notes" language="en" table="incident"><sys_documentation action="INSERT_OR_UPDATE"><element>u_atf_demo_notes</element><help/><hint/><label>ATF demo notes</label><language>en</language><name>incident</name><plural>ATF demo notes</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:08:37</sys_created_on><sys_id>c28973c7db8103003e8c72ffbf961959</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ATF demo notes</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_documentation_incident_u_atf_demo_notes_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:08:37</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<payload_hash>993949380</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>d2bd3f17db8103003e8c72ffbf961973</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e72c5c8680000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>Incident.ATF demo notes</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_guid>028973c7dc8103005f3295337cacd970</update_guid>
+<update_guid_history>028973c7dc8103005f3295337cacd970:993949380</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>atf_input_variable_85b85d97db88fe0079c670adbf96190e</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="atf_input_variable"&gt;&lt;atf_input_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.automated_testing_framework.ATFVariableElementMapper&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Recipients&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;u_recipients&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;help/&gt;&lt;hint&gt;A comma-delimited list of user email addresses that this notification should be sent to.&lt;/hint&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Recipients&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="(ATF Demo) Notification Check"&gt;cf43dd93db88fe0079c670adbf96193a&lt;/model&gt;&lt;model_id&gt;cf43dd93db88fe0079c670adbf96193a&lt;/model_id&gt;&lt;model_table/&gt;&lt;name&gt;var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;atf_input_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;tyler.coons&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-01-06 14:50:53&lt;/sys_created_on&gt;&lt;sys_id&gt;85b85d97db88fe0079c670adbf96190e&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;Recipients&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;atf_input_variable_85b85d97db88fe0079c670adbf96190e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-09-12 14:48:43&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/atf_input_variable&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-1562032713</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>d2bdbb17db8103003e8c72ffbf961904</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e769052bc0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table/>
+<target_name>Recipients</target_name>
+<type>Input Variables</type>
+<update_domain>global</update_domain>
+<update_guid>362c239b5541030057e033f06b0b4c39</update_guid>
+<update_guid_history>362c239b5541030057e033f06b0b4c39:-1562032713,152cef5be94103008dcda23e68d115da:1886170846,adcbab5b124103000ab325376224b069:-858524693</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_user_has_role_8ba83b87db8103003e8c72ffbf961920</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_has_role"><sys_user_has_role action="INSERT_OR_UPDATE"><granted_by display_value="">not-applicable</granted_by><included_in_role/><included_in_role_instance/><inh_count/><inh_map/><inherited>false</inherited><role display_value="atf_demo" name="atf_demo">75d77387db8103003e8c72ffbf9619d5</role><state>active</state><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:05:02</sys_created_on><sys_id>8ba83b87db8103003e8c72ffbf961920</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:05:02</sys_updated_on><user display_value="Auto Test">d6c77f47db8103003e8c72ffbf961922</user></sys_user_has_role></record_update>]]></payload>
+<payload_hash>-611844672</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>d6bd3f17db8103003e8c72ffbf961975</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e72c27c5a0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table/>
+<target_name>atf_demo.Auto Test</target_name>
+<type>User Role</type>
+<update_domain>global</update_domain>
+<update_guid>99b837874681030089b4016822d750b0</update_guid>
+<update_guid_history>99b837874681030089b4016822d750b0:-611844672</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_policy_action_a1c05493dbc103003e8c72ffbf961959</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><disabled>ignore</disabled><field>u_atf_demo_notes</field><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 22:50:33</sys_created_on><sys_id>a1c05493dbc103003e8c72ffbf961959</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_atf_demo_notes</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ui_policy_action_a1c05493dbc103003e8c72ffbf961959</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 22:50:33</sys_updated_on><table>incident</table><ui_policy display_value="Category is ATF Demo">ff709093dbc103003e8c72ffbf96198c</ui_policy><visible>true</visible></sys_ui_policy_action></record_update>]]></payload>
+<payload_hash>2007496335</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>dabd3f17db8103003e8c72ffbf961974</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e732319720000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>u_atf_demo_notes</target_name>
+<type>UI Policy Action</type>
+<update_domain>global</update_domain>
+<update_guid>53d05493d2c10300a7f6aa32c189935f</update_guid>
+<update_guid_history>53d05493d2c10300a7f6aa32c189935f:2007496335</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a_u_recipients_en</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_documentation element="u_recipients" label="Recipients" language="en" table="var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a"><sys_documentation action="INSERT_OR_UPDATE"><element>u_recipients</element><help/><hint>A comma-delimited list of user email addresses that this notification should be sent to.</hint><label>Recipients</label><language>en</language><name>var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a</name><plural>Recipients</plural><sys_class_name>sys_documentation</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-12 14:48:37</sys_created_on><sys_id>092cef5bdb4103003e8c72ffbf9619d5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Recipients</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_documentation_var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a_u_recipients_en</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-12 14:48:37</sys_updated_on><url/><url_target/></sys_documentation></sys_documentation></record_update>]]></payload>
+<payload_hash>-727198638</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>debd3f17db8103003e8c72ffbf961973</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e76903ab70000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>var__m_atf_input_variable_cf43dd93db88fe0079c670adbf96193a</table>
+<target_name>.Recipients</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_guid>092cef5bc541030054f53668683438d8</update_guid>
+<update_guid_history>092cef5bc541030054f53668683438d8:-727198638</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_incident_u_atf_demo_notes</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="u_atf_demo_notes" table="incident"><active>true</active><array>false</array><array_denormalized>false</array_denormalized><attributes>edge_encryption_enabled=true</attributes><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>ATF demo notes</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>u_atf_demo_notes</element><element_reference>false</element_reference><foreign_database/><internal_type display_value="String">string</internal_type><mandatory>false</mandatory><max_length>100</max_length><name>incident</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><sizeclass/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2017-09-11 21:08:37</sys_created_on><sys_id>028973c7db8103003e8c72ffbf961955</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ATF demo notes</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_dictionary_incident_u_atf_demo_notes</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2017-09-11 21:08:37</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+<payload_hash>-528832481</payload_hash>
+<remote_update_set display_value="ATF Meetup Demo">56bdbb17db8103003e8c72ffbf961903</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2017-09-12 16:05:26</sys_created_on>
+<sys_id>debdbb17db8103003e8c72ffbf961904</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>15e72c5c83f0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2017-09-12 16:05:26</sys_updated_on>
+<table>incident</table>
+<target_name>Incident.ATF demo notes</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_guid>8a8973c70d8103000cb17e4391a5a06d</update_guid>
+<update_guid_history>8a8973c70d8103000cb17e4391a5a06d:-528832481</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>

@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Servicenow Meetups</title>
+
+	<meta name="description" content="A guide">
+	<meta name="author" content="Jace Benson">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../../reveal/css/reveal.css">
+	<link rel="stylesheet" href="../../reveal/css/theme/black.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../../reveal/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="reveal/lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<!--Welcome to Meetup-->
+			<section>
+				<section>
+				<h3>Controls</h3>
+				<ul>
+					<li>Esc (zoom way out)</li>
+					<li>Alt + click (zoom in)</li>
+					<li>Spacebar (progress)</li>
+					<li>Arrows (jump around)</li>
+				</ul>
+				</aside>
+				</section>
+				<section>
+				<h1>Servicenow</h1>
+				<h1>Meetup</h1>
+				<h3>Welcome to the Developer Meetup!</h3>
+				</section>
+				<section>
+					<h2>Three rules</h2>
+					<ol>
+						<li>No "religious" wars</li>
+						<li>No recruiting</li>
+						<li>No sales pitches</li>
+					</ol>
+				</section>
+			</section>
+			<!-- Agenda/Welcome/Intros -->
+			<section>
+				<!--Agenda-->
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>Welcome</li>
+						<li>Intros</li>
+						<li>How to build a killer UX with a Service Portal Lab</li>
+						<li>Networking</li>
+						<li>Happy Hour at Green Mill</li>
+					</ul>
+				</section>
+				<!--Welcome-->
+				<section>
+					<h2>Welcome</h2>
+					<div class="fragment">
+					<p>We have a lot of new folks here today which is great!</p>
+					</div>
+					<div class="fragment">
+					<h2>Next Meetup</h2>
+					<p>Always looking for hosts and speakers</p>
+					<!--<p>Things you asked to talk about/demod</p>
+						<ul>
+							<li>Service Catalog</li>
+							<li>Service Portal</li>
+							<li>Best Practices</li>
+							<li>Automated Testing Framework</li>
+							<li>Custom Apps</li>
+						</ul>
+						-->
+					</div>
+				</section>
+				<!--Intros-->
+				<section>
+				<h2>Intros</h2>
+				<!--<ul>
+					<li>Jace Benson</li>
+					<li>Josh Nerius</li>
+					<li>Lily Li</li>
+					<li>Dave Slusher</li>
+				</ul>-->
+				</section>
+			</section>
+			<!--Meat of Meetup-->
+			<section>
+				<h2>What is this?</h2>
+				<p>This is a simple scoped app with a service portal.</p>
+				<p>This app has "notes" that users can take.  We're going to make a nice by showing this list on the service portal, then allowing you to edit the notes on the service portal.</p>
+			</section>
+			<section>
+				<h2>Overview of labs</h2>
+				<ul>
+					<li>Prep - Turn on your PDI, and install update set</li>
+					<li>Lab 0 - Introduce Notes app and Service Portal</li>
+					<li>Lab 1 - Create Notes list widget</li>
+					<li>Lab 2.1 - Populate body widget</li>
+					<li>Lab 2.2 - Update body widget from list widget</li>
+					<li>Lab 3.1 - Update list widget from body widget</li>
+					<li>Lab 3.2 - Add Filtering Notes capability</li>
+					<li>Lab 4.1 - Add new Note capability</li>
+					<li>Lab 4.2 - Add delete Note capability</li>
+				</ul>
+			</section>
+			<!--Prep Turn on PDI/Install update set-->
+			<section>
+				<!--Turn on PDI-->
+				<section>
+					<h2>Turn on your PDI</h2>
+					<p>https://developer.servicenow.com</p>
+				</section>
+				<!--Download Update Set-->
+				<section>
+					<h2>Download XML</h2>
+					<p><a href="https://sndevs.github.io/meetups/public/decks/sp-killer-ux/CreateNotes.xml" target="_blank" download>CreateNotes.xml</a></p>
+				</section>
+				<!--Install Update Set-->
+				<section class="hasVideo">
+					<h2>Install Remote Update Set</h2>
+					<video class="stretch" data-autoplay src="./assets/A.mp4" muted="muted" loop></video>
+					<aside class="notes">
+						Alt click the video (zooms in)<br/>
+						repeat to zoom out
+					</aside>
+				</section>
+				<!--Set Default Value on user field-->
+				<section>
+					<h2>Set Default Value on user field</h2>
+					<ol>
+						<li>Navigate to dictionary</li>
+						<li>x_snc_createnotes_note.user</li>
+						<li>default value: javascript:gs.getUserID();</li>
+					</ol>
+				</section>
+			</section>
+			<!-- Lab 0 Introduce the Notes App -->
+			<section>
+				<!--Goal-->
+				<section>
+					<h2>Lab 0</h2>
+					<p>Take a look at the custom Notes application that comes with your instance and create some demo data.</p>
+				</section>
+				<!--Create new notes-->
+				<section class="hasVideo">
+					<h2>Create new Notes</h2>
+					<video class="stretch" data-autoplay src="./assets/L0-2.mp4" muted="muted" loop></video>
+				</section>
+				<!--Address issue with notes not having user-->
+				<section>
+					<h2>Ensure Notes have all fields set</h2>
+				</section>
+			</section>
+			<!-- Lab 1 Notes List Widget -->
+			<section>
+				<!--Goal-->
+				<section>
+					<h2>Lab 1</h2>
+					<p>Create a custom widget that displays the list of notes you created in Lab 0. You will also broadcast the sys_id of the selected note when clicked.</p>
+				</section>
+				<!--Open the note list widget-->
+				<section>
+					<h2>Open the Note List Widget</h2>
+					<ol>
+						<li>Launch the CreateNotes portal by go to CreateNotes > Portal.</li>
+						<li>In the portal, CTRL+Right Click somewhere in the Notes list widget box and choose Widget in Editor > This should launch the Service Portal widget editor in a new tab.</li>
+					</ol>
+				</section>
+				<!--Open the note list widget video-->
+				<section class="hasVideo">
+					<h2>Open the note list</h2>
+					<video class="stretch" data-autoplay src="./assets/L1-2.mp4" muted="muted" loop></video>
+					<aside class="notes">
+						CTRL+Right Click on the widget to get the menu.<br/>
+						Choose Widget in Editor
+					</aside>
+				</section>
+				<!--Update note list widget server script-->
+				<section>
+					<h2>Update note list widget server script</h2>
+					<ol>
+						<li>Use the checkboxes at the top of the widget editor to enable the HTML Template, Client Script, and Server Script sections.</li>
+						<li>Add the following code to the Server Script field to allow us to populate the list of notes.</li>
+					</ol>
+				</section>
+				<!--Server Script-->
+				<section>
+					<h2>Server Script</h2>
+					<a href="./assets/L1-4.js" target="_blank"><img width="100%" src="./assets/L1-4.PNG" /></a>
+				</section>
+				<!--View data in $scope.data-->
+				<section>
+					<h2>View $scope.data</h2>
+					<ol>
+						<li>Reload the notes portal.</li>
+						<li>Hold CTRL+Right click on the widget.</li>
+						<li>Console.log $scope.data.</li>
+					</ol>
+					<img src="./assets/L1-5.PNG" />
+				</section>
+				<!--Populate the notes list widget-->
+				<section>
+					<h2>Populate the Notes in the Widget</h2>
+					<ol>
+						<li>Now that you are pulling the notes from the notes table, you’ll need to populate them on the page. Flip back over to your widget editor tab.</li>
+						<li>In the HTML Template section add the following.</li>
+					</ol>
+				</section>
+				<!--HTML Template-->
+				<section>
+					<h2>HTML Template</h2>
+					<p>Save the widget with this code, check the page /notes</p>
+					<a href="./assets/L1-7.txt" target="_blank"><img width="100%" src="./assets/L1-7.PNG" /></a>
+				</section>
+				<!--Add ng-click to A tag-->
+				<section>
+					<h2>Add ng-click to A tag</h2>
+					<p>This allows your html to call the function in the client script.</p>
+					<a href="./assets/L1-8-1.txt" target="_blank"><img width="100%" src="./assets/L1-8-1.PNG" /></a>
+				</section>
+				<!--Broadcast the Selected Note-->
+				<section>
+					<h2>Broadcast Selected Note</h2>
+					<p>Edit List widget (client)</p>
+					<a href="./assets/L1-8-2.js" target="_blank"><img width="65%" src="./assets/L1-8-2.PNG" /></a>
+				</section>
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>click on the notes a few times</p>
+					<p>note the "Note ID: SYS_ID"</p>
+					<img src="./assets/L1-9.PNG" />
+				</section>
+			</section>
+			<!-- Lab 2.1 Populate/Update Body widget -->
+			<section>
+				<!--Goal-->
+				<section>
+					<h2>Lab 2.1</h2>
+					<p>Configure the widget that shows the content of the selected note.</p>
+				</section>
+				<!--Open the widget-->
+				<section>
+					<h2>Open the Widget</h2>
+					<ol>
+						<li>
+						Using the widget editor you already have open from the last tab, change the current widget to the Note body widget.
+						<br/>
+						<img src="./assets/L21-2.PNG" />
+						</li>
+						<li>Like the notes list widget, this widget has already been added to the page, so you don’t need to do that</li>
+					</ol>
+				</section>
+				<!--Add Event Listener-->
+				<section>
+					<h2>Add Event Listener</h2>
+					<a href="./assets/L21-3.js" target="_blank"><img width="100%" src="./assets/L21-3.PNG" /></a>
+					<p>Save the widget.  On your portal view the console as you click.  You should see "Listener caught NoteID: .."</p>
+				</section>
+				<!--Update note list widget server  script-->
+				<section>
+					<h2>Get Content from server</h2>
+					<p>Change the function in the client script to match the below.  This will use c.server.get() to send an object containing our action and noteID to the server where we’ll use it to grab the note fields using GlideRecord.</p>
+					<a href="./assets/L21-4.js" target="_blank"><img width="100%" src="./assets/L21-4.PNG" /></a>
+				</section>
+				<!--Server Script-->
+				<section>
+					<h2>Server Script</h2>
+					<p>Now we’ll use the data passed to us in the form of the input object to get the GlideRecord data
+from the server by using the following Server Script code.</p>
+					<a href="./assets/L21-5.js" target="_blank"><img style="width:76%" src="./assets/L21-5.PNG" /></a>
+				</section>
+				<!--HTML Template-->
+				<section>
+					<h2>HTML Template</h2>
+					<p>And lastly, we need somewhere to show that data in the widget, so we’ll populate a panel
+through adding the following to the HTML Template.</p>
+					<a href="./assets/L21-6.txt" target="_blank"><img width="100%" src="./assets/L21-6.PNG" /></a>
+				</section>
+				<!--CSS - SCSS-->
+				<section>
+					<h2>Lets make this pretty</h2>
+					<a href="./assets/L21-7.css" target="_blank"><img width="90%" src="./assets/L21-7.PNG" /></a>
+					<p>Save the Widget</p>
+				</section>
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>When you click a note, it loads on the right.</p>
+					<img width="100%" src="./assets/L21-8.PNG" />
+				</section>
+			</section>
+			<!-- Lab 2.2 Populate/Update Body widget -->
+			<section>
+				<!--Goal-->
+				<section>
+				<h2>Lab 2.2</h2>
+				<p>Configure the widget that shows the content of the selected note to allow you to update the note. For this application the note will automatically update as you type</p>
+				</section>
+				<!--Update the Note widget-->
+				<section>
+					<h2>Update the Note from Widget</h2>
+					<p>The first thing we need to do is trigger an update from the input and textarea fields by adding
+	the highlighted attributes to those elements.</p>
+					<a href="./assets/L22-2.txt" target="_blank"><img src="./assets/L22-2.PNG" /></a>
+				</section>
+				<!--Client Script-->
+				<section>
+					<h2>Client Script</h2>
+					<p>Now that the input and textarea elements will trigger something when they change, we need to
+add a client side function that will run when triggered by the field changes. Add the following
+function to the Client Script field after line 13.</p>
+					<a href="./assets/L22-3.js" target="_blank"><img src="./assets/L22-3.PNG" /></a>
+				</section>
+				<!--Server Script-->
+				<section>
+					<h2>Server Script</h2>
+					<p>Now we need to update the Server Script so notes changes get written to the server. Add the highlighted section to the Server Script.</p>
+					<a href="./assets/L22-4.js" target="_blank"><img src="./assets/L22-4.PNG" /></a>
+					<p>Save the widget</p>
+				</section>
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>Test by going back to your portal tab and refreshing the page. Click on a note, change the title, wait a couple of seconds, and then refresh the page and see if the title in the list has changed.</p>
+				</section>
+			</section>
+			<!-- Lab 3.1 Notes List Widget -->
+			<section>
+				<!--Goal-->
+				<section>
+					<h2>Lab 3.1</h2>
+					<p>Edit both widgets so that when you change the title in the note body widget, the new title gets pushed into the note list widget without a refresh.</p>
+				</section>
+				<!-- Edit Note Body widget server -->
+				<section>
+					<h2>Edit Body widget (server)</h2>
+					<p>After the note is updated, we’ll want to return the title back from the server to the client, so add the highlighted portion of the following script to the Server Script field.</p>
+					<a href="./assets/L31-2.js" target="_blank"><img src="./assets/L31-2.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget -->
+				<section>
+					<h2>Edit Body widget (client)</h2>
+					<p>Now we need to take that value and broadcast it to the other widget. Add the highlighted portion to the c.updateNote() function in the Client Script field.</p>
+					<a href="./assets/L31-3.js" target="_blank"><img src="./assets/L31-3.PNG" /></a>
+				</section>
+				<!-- Edit Note List widget -->
+				<section>
+					<h2>Edit List widget (client)</h2>
+					<p>Now we need to listen for the broadcasted updateTitle event and update the title on the page by adding the following.</p>
+					<a href="./assets/L31-4.js" target="_blank"><img src="./assets/L31-4.PNG" /></a>
+				</section>
+				
+				<!-- Edit Note List widget -->
+				<section>
+					<h2>Edit List widget (client)</h2>
+					<p>You’ll notice that our event listener isn’t actually doing anything here. Our problem is that we don’t have anything that tells us which note to update. In order to fix that, we’re going to populate a variable with the position in the notes array of the note that was clicked. Add the highlighted portions to the Client Script field.</p>
+					<a href="./assets/L31-5.js" target="_blank"><img src="./assets/L31-5.PNG" /></a>
+				</section>
+				
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>Test by going back to your portal tab and refreshing the page. Click on a note, change the title, wait a couple of seconds, and then refresh the page and see if the title in the list has changed.</p>
+				</section>
+			</section>
+			<!-- Lab 3.2 Notes List Widget -->
+			<section>
+				<!--Goal-->
+				<section>
+					<h2>Lab 3.2</h2>
+					<p>Edit both widgets so that when you change the title in the note body widget, the new title gets pushed into the note list widget without a refresh.</p>
+				</section>
+				<!-- Edit Note Body widget server -->
+				<section>
+					<h2>Edit List widget (HTML)</h2>
+					<p>All we need to do to add a filter is add an input box and reference it in the ngRepeat. Add the highlighted portions to the HTML Template field.</p>
+					<a href="./assets/L32-2.txt" target="_blank"><img src="./assets/L32-2.PNG" /></a>
+					<p>Save the widget</p>
+				</section>
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>You should be able to filter the notes by typing in the Filter field.</p>
+				</section>
+			</section>
+			<!-- Lab 4.1 Notes List Widget -->
+			<section>
+				<!--Goal-->
+				<section>
+					<h2>Lab 4.1</h2>
+					<p>So far we’ve added the ability to load your list of notes from the database and edit those notes, but what if you want to add a new note. Add a button that allows you to create a new note from our app.</p>
+				</section>
+				<!-- Edit Note Body widget html -->
+				<section>
+					<h2>Edit List widget (HTML)</h2>
+					<p>We need to add a button to the UI to trigger the new note creation. We’ll add a button with a glyphicon to the HTML. Add the highlighted text to the panel-header part of the HTML Template</p>
+					<a href="./assets/L41-2.txt" target="_blank"><img src="./assets/L41-2.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget css -->
+				<section>
+					<h2>Edit List widget (CSS)</h2>
+					<p>Now we want to add a bit of styling to the title to make everything look a little better. Check the checkbox next to the CSS – SCSS option to add a fourth column to the widget editor.</p>
+					<a href="./assets/L41-3.css" target="_blank"><img src="./assets/L41-3.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget client -->
+				<section>
+					<h2>Edit List widget (Client)</h2>
+					<p>In the Client Script portion of the widget editor add the following function, but before the closing curly brace. This is going to call the server side code, tell it we’re creating a new note and then get back information about the new note</p>
+					<a href="./assets/L41-4.js" target="_blank"><img src="./assets/L41-4.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget s -->
+				<section>
+					<h2>Edit List widget (Server)</h2>
+					<p>Now we need to add some code to the server side script to create a new note. Add the following code before the closing curly brace in the Server Script field. This will create the new note and return the title, note, and sys_id to the client.</p>
+					<a href="./assets/L41-5.js" target="_blank"><img src="./assets/L41-5.PNG" /></a>
+				</section>
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>Go back to the CreateNotes portal, refresh the page, and click the New button. You should see a new note show up in the list and be available to edit on the right.</p>
+				</section>
+			</section>
+			<!-- Lab 4.2 Notes List Widget -->
+			<section>
+				<!--Goal-->
+				<section>
+					<h2>Lab 4.2</h2>
+					<p>Add a button to the note editor that triggers a delete of the note record.</p>
+				</section>
+				<!-- Edit Note Body widget server -->
+				<section>
+					<h2>Edit Body widget (HTML)</h2>
+					<p>First we need to add a delete button. Add the highlighted lines to the HTML Template field.</p>
+					<a href="./assets/L42-2.txt" target="_blank"><img src="./assets/L42-2.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget server -->
+				<section>
+					<h2>Edit Body widget (Client)</h2>
+					<p>Now we need to create the client side function that gets triggered by the new button added in the last step. Paste the following before the c.autoExpand function.</p>
+					<a href="./assets/L42-3.js" target="_blank"><img src="./assets/L42-3.PNG" /></a>
+				</section>
+				<!-- Edit Note Body widget server -->
+				<section>
+					<h2>Edit Body widget (Server)</h2>
+					<p>Now we need to add a few lines to the Server Script field that will delete the record on the server side. We already have the GlideRecord call setup, so we just need to add the highlighted text.</p>
+					<a href="./assets/L42-4.js" target="_blank"><img src="./assets/L42-4.PNG" /></a>
+				</section>
+				<!-- Edit Note List widget server -->
+				<section>
+					<h2>Edit List widget (Client)</h2>
+					<p>The note is already being removed from the DB, but now we need to remove it from the Note list widget.  Add the following code before the last curly brace.</p>
+					<a href="./assets/L42-5.js" target="_blank"><img src="./assets/L42-5.PNG" /></a>
+				</section>
+				<!--Verify success Lab step-->
+				<section>
+					<h2>Lab Success Verification</h2>
+					<p>Click on a note and click on the delete button. It should disappear from the screen and from the list.</p>
+				</section>
+			</section>
+			<!-- -->
+			<section style="text-align: left;">
+				<h1>End of Presentation</h1>
+				<p>
+					Now time for Demos, then Open discussion/happy hour
+				</p>
+			</section>
+				<!--
+				<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+				</section>
+				-->
+		</div>
+
+	</div>
+
+	<script src="../../reveal/lib/js/head.min.js"></script>
+	<script src="../../reveal/js/reveal.js"></script>
+
+	<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				defaultTiming: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: '../../reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: '../../reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: '../../reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); hljs.configure({userBR:true}); } },
+					{ src: '../../reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+	</script>
+
+</body>
+
+</html>
