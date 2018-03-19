@@ -1,0 +1,31 @@
+<html>
+<!--<link rel="stylesheet"
+href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">-->
+<link rel="stylesheet"
+href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+<pre><code class="html">
+&lt;div&gt;
+	&lt;table&gt;
+		&lt;tr&gt;
+			&lt;!--On the next line we are calling ng-repeat which will loop through $scope.checks and creates all the html elements contained in the &lt;td&gt; it is on --&gt;
+			&lt;!--check ends up being our new variable on each iteration --&gt;
+			&lt;td ng-repeat="check in checks" class="tableData"&gt;
+				&lt;!--Here we are going to add ng-click to call our setCheckbox function when the button is clicked. If you recall this will invert the value of the checkbox variable--&gt;
+						&lt;!--We are also calling ng-class which will set the class 'text-primary' when the variable value is true--&gt;
+			&lt;button class="notSelected" ng-click="setCheckbox(check.name)" ng-class="{'text-primary':g_form.getValue(check.name)=='true'}"&gt;
+				&lt;!--Then we are going to specify the font awesome class. Since you can specify the icon you can use on a per variable basis, we are using ng-class to set the icon --&lt;
+				&lt;i class='fa' ng-class='[check.icon]'/&gt;
+			&lt;/button&gt;
+			&lt;div&gt;
+				&lt;!--Here we are rendering the display name of the variable --&gt;
+				{{check.displayname}}
+			&lt;/div&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+&lt;/div&gt;  
+</code></pre>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<!--<link rel="stylesheet"
+href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">-->
+<link rel="stylesheet"
+href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+<pre><code class="javascript">
+function($scope) {
+	//This is the controller, we've included $scope in the function above because it's easy to work with
+	var c = this;
+	
+	//We are going to simplify accessing g_form within the client script by setting it as a variable named g_form
+	var g_form = $scope.page.g_form;
+	//We are going to simplify accessing g_form within the HTML by setting it as a $scope attribute
+	$scope.g_form = $scope.page.g_form;
+	//Here we are going to create a new function
+	$scope.getData = function(varid, varname){
+		//Now we are going to call the server with action of getData to fetch the variable data
+		c.server.get({action:'getData', variableid:varid, variablename:varname}).then(function(r) {
+			//$scope.checks will be used in the HTML to render the display
+			$scope.checks = r.data.vars;
+			//Now we will loop through all the variables that were returned and hide the OOB checkboxes
+			for(var i in r.data.vars){
+				g_form.setVisible(r.data.vars[i].name, false);
+			}
+		});
+	};
+	//This is a function that will allow the HTML to invert whatever the checkbox is currently set to
+	$scope.setCheckbox = function(varname){
+		//This converts the string value to a boolean for easier inversion
+		var val = (g_form.getValue(varname) == "true");
+		//Set the inverted value from a boolean to a string because SNow
+		g_form.setValue(varname, (!val).toString());
+	};
+	//On page load execute getData. There maybe a better way to do this but this is what we came up with
+	$scope.getData($scope.page.field.sys_id, $scope.page.field.variable_name);
+}
+</code></pre>
+</html>

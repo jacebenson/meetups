@@ -1,0 +1,56 @@
+<html>
+<!--<link rel="stylesheet"
+href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">-->
+<link rel="stylesheet"
+href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+<pre><code class="javascript">
+(function() {
+	//First we are going to create data.vars as an array so we can push data into it later
+	data.vars = [];
+	
+	//Next we are going to create input actions on the server so the client can make calls to the server
+	if(input){
+		//This next check is to limit what activies the service performs based on the action specified in the client script.
+		//If you did not specify the action the server would just run everything in the server script
+		if(input.action == 'getData'){
+			//Next we will glide out to retrieve the variables that match the macro's name
+			var datagr = new GlideRecord("item_option_new");
+			
+			//In the encoded query below we will be pulling the catalog ID from the url and the macro name from the input parameters
+			datagr.addEncodedQuery('cat_item=' + $sp.getParameter('sys_id') + '^active=true^attributesLIKEbutton_widget=' + input.variablename);
+			//The next line it to position the variables in the correct order
+			datagr.orderBy('order');
+			//Run the query
+			datagr.query();
+			
+			//Now we will step through the results to retreieve the relevant attributes
+			while(datagr.next()){
+				//This variable is to set the default font awesome icon if one is not set
+				var iconval = 'fa-check';
+				//This variable is to create an array of the attributes attached to the variable
+				var attrib = datagr.attributes.toString().split(';');
+				
+				//This next loop is to search through all of the attributes and find the icon value if present
+				for(var i in attrib){
+					if(attrib[i].indexOf('icon=') >= 0){
+						iconval = attrib[i].replace('icon=', '');
+						break;
+					}
+				}
+				
+				//Now we are going to push the attributes as a JSON object into data.vars for client consumption
+				data.vars.push({
+					"name" : datagr.name.toString(),
+					"icon" : iconval,
+					"displayname" : datagr.question_text.toString()
+				});
+			}
+		}
+		
+	}
+})();
+</code></pre>
+</html>
