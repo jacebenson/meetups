@@ -1,0 +1,24 @@
+(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	if (options.table) {
+		data.cardFields = $sp.getListColumns(options.table, options.view_dv);
+		data.rows = [];
+		var gr = new GlideRecord(options.table);
+		gr.addEncodedQuery(options.filter);
+		gr.setLimit(25);
+		gr.query();
+		if (!data.primaryField) {
+				data.primaryField = gr.getDisplayName();
+			}
+		var fields = "sys_id," + data.primaryField + "," + data.cardFields;
+		data.fields = $sp.getFieldsObject(gr, fields);
+		while(gr.next()) {
+			var row = {};
+			$sp.getRecordDisplayValues(row, gr, fields);
+			data.rows.push(row);
+		}
+	}
+	
+})();

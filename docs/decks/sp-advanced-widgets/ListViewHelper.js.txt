@@ -1,0 +1,22 @@
+var ListViewHelper = Class.create();
+ListViewHelper.prototype = {
+    initialize: function() {
+    },
+	
+	getViewsForList: function(table) {
+		var views = [];
+		var gr = new GlideRecord("sys_ui_list");
+		gr.addEncodedQuery("viewNOT LIKErpt^sys_userISEMPTY");
+		gr.addQuery("name", table);
+		gr.query();
+		while(gr.next()) {
+			var view = gr.getValue("view");
+			if (views.indexOf(view) == -1) {
+				views.push(view);
+			}
+		}
+		return views.join(",");
+	},
+
+    type: 'ListViewHelper'
+};

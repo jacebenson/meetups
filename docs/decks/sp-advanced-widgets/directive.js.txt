@@ -1,0 +1,50 @@
+function() {
+	var template = "<div class='list-group'>";
+		template += "<a href='javascript:void(0)' class='list-group-item' ng-style='::ctrl.getPriority()'>";
+		template += "<div class='small'>{{::row[primaryField]}}</div>";
+		template += "<div class='h4 list-group-item-heading'>{{::row[displayField]}}</div>";
+		template += "<dl class='fields'>";
+		template += "<span ng-repeat='f in cardFields'><dt>{{fields[f].label}}</dt><dd>{{row[f]}}</dd></span>";
+		template += "</dl>";
+		template += "</a>";
+		template += "</div>";
+	return {
+		restrict: 'E',
+		scope: {
+			row: '=',
+			primaryField: '=',
+			displayField: '=',
+			priorityField: '=',
+			fields: '=',
+			cardFields: '='
+		},
+		template: template,
+		controllerAs: 'ctrl',
+		controller: function($scope) {
+			var ctrl = this;
+			var row = $scope.row;
+			ctrl.getPrimaryField = function getPrimaryField() {
+				return row[$scope.primaryField];
+			};
+			ctrl.getPriority = function() {
+				if (typeof row[$scope.priorityField] == "undefined") {
+					return;
+				}
+				var p = row[$scope.priorityField];
+				var color;
+				if (p.indexOf('4') > -1) {
+					color = 'green';
+				} else if (p.indexOf('3') > -1) {
+					color = 'yellow';
+				} else if (p.indexOf('2') > -1) {
+					color = 'orange';
+				} else if (p.indexOf('1') > -1) {
+					color = 'red';
+				}
+				if (color) {
+					return {'border-left': '3px solid ' + color};
+				}
+			};
+		}
+	};
+}

@@ -1,0 +1,81 @@
+function($scope) {
+	/* widget controller */
+	var c = this;
+	
+	if (!isConfigured()) {
+		// Provide demo data if options.title is empty
+		c.options.title = "My active incidents";
+		c.options.priority_field = "priority";
+		c.options.display_field = "short_description";
+		c.data = {
+			"fields": {"category": {"label": "Category"}, "opened_by": {"label": "Opened By"}},
+			"primaryField": "number",
+			"cardFields": "category,opened_by",
+			"rows": [
+				{"sys_id":"1", "number":"INC0000002","short_description":"Network file shares access issue","category":"Network","priority":"1 - Critical","opened_by":"admin"},
+				{"sys_id":"2", "number":"INC0000003","short_description":"I need a mouse","category":"Hardware","priority":"4 - Low","opened_by":"Garfield"}
+			]
+		}
+	} 
+	
+	c.cardFields = getCardFields(c.data.cardFields, c.data.primaryField);
+	
+	c.getPrimaryField = function getPrimaryField(row) {
+		return row[c.data.primaryField];
+	};
+	
+	function getCardFields(allFields, primaryField) {
+		var cardFields = [];
+		allFields = allFields.split(",");
+		var exclude = [primaryField, c.options.display_field, c.options.priority_field];
+		for (var i = allFields.length-1; i>= 0; i--){
+			if (exclude.indexOf(allFields[i]) == -1) {
+				cardFields.push(allFields[i]);
+			}
+		}
+		return cardFields;
+	}
+	
+	function isConfigured() {
+		if (!c.options) {
+			return false;
+		}
+		
+		if (typeof c.options.title === "undefined")
+			return false;
+		
+		return true;
+	}
+	
+	c.showFilter = function showFilter(event) {
+		var filterModalCtrl;
+		event.preventDefault();
+		event.stopPropagation();
+		
+		var unregister = $scope.$on("snfilter:update_query", function(e, query) {
+			e.stopPropagation();
+			e.preventDefault();
+			console.info("new Query", massageEncodedQuery(query));
+			// Todo: call webservice for data
+			filterModalCtrl.close();
+		});
+		
+		var filterModal = angular.copy(c.data.filterModal);
+		filterModal.options.afterOpen = function(ctrl){
+			filterModalCtrl = ctrl;
+			$scope.$broadcast("snfilter:initialize_query", massageEncodedQuery(c.options.filter));
+		};
+		
+		filterModal.options.afterClose = function() {
+			unregister();
+			c.filterModal = null;
+			filterModalCtrl = null;
+		};
+		c.filterModal = filterModal;
+	}
+	
+	function massageEncodedQuery(query) {
+		return (query) ? query.replace(/CONTAINS/g, "LIKE").replace(/DOES NOT CONTAIN/g, "NOT LIKE") : query;
+	}
+	
+}

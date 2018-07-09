@@ -1,0 +1,17 @@
+<div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="h3 panel-title">{{::c.options.title}}</span>
+    </div>
+    <div class="panel-body">
+      <div class="list-group" ng-repeat="row in c.data.rows track by row.sys_id">
+        <a href="javascript:void(0)" class="list-group-item">
+          <div class="h4 list-group-item-heading">{{c.getPrimaryField(row)}}</div>
+          <dl class="fields">
+            <span ng-repeat="f in c.cardFields"><dt>{{c.data.fields[f].label}}</dt><dd>{{row[f]}}</dd></span>
+          </dl>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

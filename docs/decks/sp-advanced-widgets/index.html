@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SP Advanced Widget Development</title>
+<meta charset="utf-8">
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    body {
+    font-family: 'Droid Serif';
+    }
+    h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 400;
+    margin-bottom: 0;
+    }
+    .remark-slide-content {
+    background-color:black;
+    }
+    * {
+    color:white;
+    }
+
+</style>
+</head>
+<body>
+<textarea id="source">
+class: center, middle
+
+# Welcome Servicenow Developer meetup!
+
+---
+
+# SP Advanced Widget Development
+
+<!--Original: https://developer.servicenow.com/app.do#!/creatorcon/CCW1088 -->
+
+Scoped app import from git: https://github.com/sndevs/CCW3956.git
+
+---
+
+# What we will cover (5 labs)
+
+## 1. Getting started
+## 2. Using the Option Schema
+## 3. Using SP instance
+## 4. Handling the empty State
+## 5. Embedded Widgets and directives
+## 6. Extra things
+  
+---
+
+# Getting started
+
+### Ensure you have a instance up and ready.
+
+### Open studio and import the scoped app from this url; 
+
+### https://github.com/sndevs/CCW3956.git
+
+![](select-app.png)
+
+---
+
+# Using the Option Schema
+
+Widget Options Schema are a way to defind configuration options that your widget can accept.
+
+To work on this we'll create a Card List Widget.
+<pre>
+Name: "Card List Simple"
+ID: card_list_simple
+</pre>
+Once you have this open in the widget editor, click the hamburger icon, then "Edit option schema"
+
+Then add these options;
+<pre>
+| Label  | Name   | Type   | Hint                           |
+| ------ | ------ | ------ | ------------------------------ |
+| Title  | title  | string | The title for the card list    |
+| Table  | table  | string | The table for the query        |
+| Filter | filter | string | The filter query string        |
+| Fields | fields | string | Comma seperated list of fields | 
+</pre>
+
+---
+
+# Setting up the widget: Server Script
+
+- Look at this file [server.js](./simple.list.server.js.txt)
+- Then type it out on your own.  Learn by doing.
+
+![](simple.list.server.js.png)
+
+---
+
+# Setting up the widget: CSS
+
+- Look at this file [style.css](./simple.list.scss.txt)
+- Then type it out on your own.  Learn by doing.
+
+![](simple.list.scss.png)
+
+---
+
+# Setting up the widget: Client script
+  
+  - Look at this file [client.js](./simple.list.client.js.txt)
+  - Then type it out on your own.  Learn by doing.
+  
+![](simple.list.client.js.png)
+
+---
+
+# Setting up the widget: HTML Template
+  
+  - Look at this file [template.html](./simple.list.html.txt)
+  - Then type it out on your own.  Learn by doing.
+    
+![](simple.list.html.png)
+
+---
+
+# Add Simple List Widget to Playground
+
+## Open the Service Portal designer by opening a new tab and going to /$spd.do
+
+## Type in the filter to find Playground. Open the page Playground home
+
+## Add a container, then as 3,9 split grid
+
+## Put the Simple List Widget in the left side.
+
+---
+
+# Configure your instances options
+
+## Click the pencil while hovering over the newly placed widget;
+
+<pre>
+| Field  | Value                                         |
+| ------ | --------------------------------------------- |
+| Title  | Active Incidents                              | 
+| Table  | incident                                      |
+| Filter | active=true                                   |
+| Fields | assigned_to, impact, incident_state, priority |
+</pre>
+
+## Save
+
+---
+
+# Check in
+
+![](simple.list.check.in.png)
+
+---
+
+# Using the SP Instance
+
+You will learn how to create an `sp_instance` extension table 
+that allows for more types of options and configurability of 
+your widgets.
+
+To give a fair comparison, we will create a similar widget. 
+But when you configure this widget you will be able to pick a
+pre-built view for the list of fields on your cards. If you
+already have a VTB card layout, you could just re-use it like 
+this:
+
+![](sp_instance.png)
+
+---
+
+# Create a Table
+
+<pre>
+| Field         | Value                   |
+| ------------- | ----------------------- | 
+| Label         | Card List Instance      |
+| Name          | [automatically created] |
+| Extends table | Instance with Table     |
+| Create Module | false                   |
+</pre>
+
+## Then Add a Column (You'll have to goto adv. view)
+
+<pre>
+| Field                  | Value     |
+| ---------------------- | --------- |
+| Type                   | Reference |
+| Label                  | View      |
+| Name                   | view      |
+| Reference              | UI View   |
+| Use reference qualifer | Advanced  | 
+| Reference Qual         | see below |
+</pre>
+javascript:"sys_idIN" + new x_snc_reusable_wid.ListViewHelper().getViewsForList(current.table)
+
+---
+
+# Create a Script Incldue for a ref. qualifer
+
+  - Look at this file [ListViewHelper.js](./ListViewHelper.js.txt)
+  - Then type it out on your own.  Learn by doing.
+    
+![](ListViewHelper.js.png)
+
+---
+
+# Clone card list widget
+
+1. Open Card List Simple
+1. Clone "Card List Simple"
+1. Name the new widget "Card List"
+1. Submit
+
+---
+
+# Edit Card List widget in platform
+
+The widget editor doesn’t currently offer a way to do this step.
+
+1. Open the new Card List widget using the platform by using the widget properties menu and selecting Open in platform.
+1. Ensure the widget name is Card List (If not you must go to [instance]/sp_widget_list.do and select the Card List widget)
+1. Set Data Table: Card List Instance<br/>[Screenshot](./setDataTable.png)
+1. Set Fields: `Title, Table, View, Filter, Display Field`
+1. Option Schema: `[{"hint":"A field that contains a value 1 - 4 to indicate priority.","name":"priority_field","default_value":"priority","label":"Priority Field","type":"string"}]`
+
+---
+
+# Setting up the widget: HTML Template
+  
+  - Look at this file [template.html](./list.html.txt)
+  - Then type it out on your own.  Learn by doing.
+    
+![](list.html.png)
+
+---
+
+# Setting up the widget: Server Template
+  
+  - Look at this file [server.js](./list.server.js.txt)
+  - Then type it out on your own.  Learn by doing.
+    
+![](list.server.js.png)
+
+---
+
+# Setting up the widget: Client Template
+  
+  - Look at this file [client.js](./list.client.js.txt)
+  - Then type it out on your own.  Learn by doing.
+
+---
+
+# Setting up the widget: HTML Template
+  
+  - Look at this file [template.html](./list.html.txt)
+  - Then type it out on your own.  Learn by doing.
+    
+![](list.html.png)
+
+---
+
+# Configure the card_list_instance form
+
+1. Goto /x_snc_reusable_wid_card_list_instance.do
+1. Right click on the form header. Choose Configure -> Form Layout.
+1. Change the View Name to: SP Instance Config
+1. Choose the Section Presentation.
+1. Move the field View below Title in the Selected items.
+1. Remove everything else from Selected items.
+
+---
+
+# Add the new card list to a page
+
+1. Using STUDIO click Create Application File.
+1. Select Service Portal -> Service Portal Page. Click Create.
+1. For page name and ID use the following values:<pre>
+  | Field      | Value              |
+  | ---------- | ------------------ |
+  | Page title | Incident Workspace |
+  | Page ID    | iw                 |
+  </pre>
+1. Click on the ➕ button to add a predefined layout of [ 3 | 9 ]
+1. Drag the widget Card List to the left column.
+1. Click on the edit icon and set the following instance options:<pre>
+  | Field          | Value             |
+  | -------------- | ----------------- |
+  | Table          | Incident          |
+  | Filter         | active=true       |
+  | Display field  | Short Description |
+  | Title          | Active Incidents  |
+  | View           | Mobile            |
+  | Priority Field | [use default]     |</pre>
+1. Save
+
+---
+
+# Handling the empty state
+
+## Providing an empty state
+
+When you dropped the card list widget onto
+the page using the designer it was nothing
+more than a box with an outline. Even editing
+the instance options only slightly revealed 
+what the widget does. When practical, your 
+widgets should provide an empty state and 
+tip users off about how to proceed and what it
+will look like when it has data.
+
+Using the Demo data field on a widget is good
+for previewing a widget in the widget editor 
+but won’t work in the designer. This is because 
+the demo data is overwritten as soon as there 
+is an instance record. Here are a couple of ways 
+you can provide an empty state for a good 
+experience in the designer.
+
+---
+
+# Show a default title
+
+1. Open the Card List Widget and add the following code 
+   to the client script
+   ![](default.title.png)
+1. Now you can use that function to set an example title 
+   in the client script. ![](default.title.replace.png)
+1. And replace it with this; ![](default.title.replace.with.png)
+---
+
+# If you want an even richer UX
+
+Replace your client script with [this client script](./rich.client.js.txt)
+
+---
+
+# Try it out
+
+
+1. Open the designer in a new tab /$spd.do
+1. Edit the Incident Workspace page
+1. Delete the Card List widget from the left column by clicking on the delete button when hovering over the widget. When it asks you to confirm, click Yes.
+1. Drag a new instance of the Card List widget from the widget list to the left column again.
+1. Now you will see a much better example of the card list before it’s even configured:
+
+You should see something like;
+
+![](rich.ux.png)
+
+---
+
+# Embedded widgets and directives
+
+## Small is big
+
+As your widgets become more complex 
+you will want to break them up into 
+smaller manageable components. Those 
+components can then be reused elsewhere 
+or just help define the connections 
+between parts of your application.
+
+---
+
+# Move the card template to a directive
+
+1. Open the widget Card List in the platform 
+   ui by going to /sp_widget_list.do
+1. Search for and open Card List
+1. Scroll down to the bottom of the widget 
+   and find the related list Angular Providers
+1. Click New
+1. Use these values for the new Angular Provider 
+   - Type: Directive
+   - Name: workspaceCard
+   - Script: [directive.js](directive.js.txt)
+
+Pros:
+
+  Keeps the template close to the directive code
+  Allows you to pass in a different template as a scope parameter
+  Can be reused without providing an angular template
+
+Cons:
+
+  Template isn’t cached
+  Directive can get very large
+   
+---
+
+# 
+
+---
+
+# 
+
+---
+
+# 
+
+---
+
+# Sharing data and events
+
+---
+
+# 
+
+---
+
+# 
+
+---
+
+# 
+
+---
+
+# 
+
+---
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create();
+</script>
+</body>
+</html>

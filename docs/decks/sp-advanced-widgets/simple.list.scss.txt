@@ -1,0 +1,16 @@
+.fields {
+  $dl-horizontal-offset: 120px;
+  dt {
+    font-weight: normal;
+    color: $text-muted;
+    float: left;
+    width: ($dl-horizontal-offset - 20);
+    clear: left;
+    text-align: right;
+    @include text-overflow;
+  }
+  dd {
+    @include clearfix;
+    margin-left: $dl-horizontal-offset;
+  }
+}

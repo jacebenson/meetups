@@ -1,0 +1,43 @@
+function() {
+	/* widget controller */
+	var c = this;
+	if (c.data && c.data.cardFields) {
+		c.cardFields = getCardFields(c.data.cardFields, c.data.primaryField);
+	}
+	
+	c.getPrimaryField = function getPrimaryField(row) {
+		return row[c.data.primaryField];
+	};
+	
+	function getCardFields(allFields, primaryField) {
+		var cardFields = [];
+		allFields = allFields.split(",");
+		var exclude = [primaryField, c.options.display_field, c.options.priority_field];
+		for (var i = allFields.length-1; i>= 0; i--){
+			if (exclude.indexOf(allFields[i]) == -1) {
+				cardFields.push(allFields[i]);
+			}
+		}
+		return cardFields;
+	}
+	
+	c.getPriority = function(row) {
+		if (typeof row[c.options.priority_field] == "undefined") {
+			return;
+		}
+		var p = row[c.options.priority_field];
+		var color;
+		if (p.indexOf('4') > -1) {
+			color = 'green';
+		} else if (p.indexOf('3') > -1) {
+			color = 'yellow';
+		} else if (p.indexOf('2') > -1) {
+			color = 'orange';
+		} else if (p.indexOf('1') > -1) {
+			color = 'red';
+		}
+		if (color) {
+			return {'border-left': '3px solid ' + color};
+		}
+	}
+}

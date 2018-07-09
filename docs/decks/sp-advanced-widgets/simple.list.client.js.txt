@@ -1,0 +1,9 @@
+function() {
+  /* widget controller */
+  var c = this;
+	if (c.options.fields)
+		c.cardFields = c.options.fields.split(",");
+	c.getPrimaryField = function getPrimaryField(row){
+		return row[c.data.primaryField];
+	};
+}
